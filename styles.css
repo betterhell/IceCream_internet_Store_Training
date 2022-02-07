@@ -179,25 +179,37 @@ header {
 }
 
 /* Main content - slider */
-/* main {
+main {
   display: flex;
+  gap: 30px;
+  justify-content: center;
   max-width: 1170px;
   margin: 0 auto;
   margin-top: 21px;
-} */
+}
 
 .top-slider {
   display: flex;
   max-width: 1170px;
   margin: 0 auto;
   margin-top: 21px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+#hiddenBlock {
+  display: none;
 }
 
 .info1 {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   margin-right: 113px;
+}
+
+.hiddenBlock-1,
+.hiddenBlock-2 {
+  display: none;
 }
 
 .info1 h1 {
@@ -254,7 +266,7 @@ header {
 /* IceCreams Slider */
 .slider {
   display: flex;
-  justify-content: baseline;
+  position: relative;
 }
 
 .main-ice {
@@ -262,34 +274,84 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 300px;
-  margin-right: 75px;
+  /* position: absolute; */
 }
+
+#hiddenIMG {
+  display: none;
+}
+
+/* Настройки слайдера */
+
+.slider .carousel-left,
+.carousel-right {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 0 3px 3px 0;
+}
+
+.slider .main-ice img {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+  border: none;
+  box-shadow: none;
+}
+
+/* Кнопки слайдера */
 
 .carousel-left::before {
   content: url(/images/left.png);
   z-index: 1;
+  align-self: center;
+  right: 32px;
+  position: relative;
 }
 
-.carousel-right::after {
+.carousel-right:after {
   content: url(/images/right.png);
   z-index: 1;
-}
-
-.off-ice-1 {
-  margin-right: 75px;
-}
-
-.off-ice-1,
-.off-ice-2 {
-  background-image: url(/images/layers/Подложка\ mini.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  max-width: 66px;
-  height: 150px;
   align-self: center;
+  right: -268px;
+  position: relative;
 }
+
+/* Анимация слайдера */
+
+.slider .main-ice {
+  animation-name: slide;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+}
+@-webkit-keyframes slide {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ------------------------------------------------ */
+
 /* Social */
+
 .social-block {
   display: flex;
   align-items: flex-end;
@@ -299,10 +361,6 @@ header {
 .inst,
 .vk {
   padding-right: 8px;
-}
-
-.fb:hover {
-  background-color: f;
 }
 
 /* under-slider */
@@ -316,22 +374,27 @@ header {
   display: flex;
 }
 
-.dot {
-  min-width: 12px;
+.slider-dots_item {
+  width: 12px;
   height: 12px;
-  background: #fcfcfc;
-  opacity: 0.3;
   border-radius: 50px;
   margin-right: 8px;
-}
-
-.dot:active {
-  background: #fcfcfc;
-}
-
-.dot:hover {
+  opacity: 0.3;
   background: rgba(252, 252, 252, 0.3);
-  border: 1px solid black;
+  border: 1px solid #2d3440;
+  box-sizing: border-box;
+  border-radius: 100px;
+}
+
+.slider-dots_item:hover {
+  background: rgba(252, 252, 252, 0.3);
+  border: 1px solid #fcfcfc;
+  box-sizing: border-box;
+}
+
+.slider-dots_item:active {
+  background: #fcfcfc;
+  border-radius: 100px;
 }
 
 .fb:hover {
@@ -1111,6 +1174,23 @@ header {
   color: #fcfcfc;
 }
 
+/* Попап обратной связи */
+
+.popup-bg {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.popup {
+  position: absolute;
+}
+
+/* ------------------------------------------- */
 /* Footer */
 footer {
   position: sticky;
