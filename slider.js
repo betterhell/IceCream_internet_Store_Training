@@ -19,7 +19,7 @@ const showSlides = (n) => {
   let dots = document.getElementsByClassName("slider-dots_item");
   let text = document.getElementsByClassName("info1");
 
-  if (n > slides.length && text.length) {
+  if (n > slides.length) {
     slideIndex = 1;
   }
   if (n < 1) {
@@ -32,11 +32,9 @@ const showSlides = (n) => {
     text[i].style.display = "none";
   }
   for (let i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].classList.remove("active");
   }
   slides[slideIndex - 1].style.display = "block";
   text[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+  dots[slideIndex - 1].classList.add("active");
 };
-
-// --------------------------------

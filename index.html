@@ -69,7 +69,7 @@
           <a class="top-button" href="###">Заказать</a>
         </div>
 
-        <div class="info1" id="hiddenBlock">
+        <div class="info1 hiddenBlock">
           <h1>Сливочное мороженое со вкусом банана</h1>
           <p>
             Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и
@@ -78,7 +78,7 @@
           <a class="top-button" href="###">Заказать</a>
         </div>
 
-        <div class="info1" id="hiddenBlock">
+        <div class="info1 hiddenBlock">
           <h1>Карамельный пломбир с маршмеллоу</h1>
           <p>
             Необычный сладкий десерт с карамельным топпингом и кусочками зефира
@@ -95,19 +95,16 @@
         </div>
         <img
           class="main-ice"
-          id="hiddenIMG"
           src="/images/icecreams/Мороженко1.svg"
           alt="Мороженое"
         />
         <img
-          class="main-ice"
-          id="hiddenIMG"
+          class="main-ice hiddenIMG"
           src="/images/icecreams/Мороженко2.svg"
           alt="Мороженое2"
         />
         <img
-          class="main-ice"
-          class="hiddenIMG"
+          class="main-ice hiddenIMG"
           src="/images/icecreams/Мороженко3.svg"
           alt="Мороженое3"
         />
@@ -264,9 +261,9 @@
           <div class="subs-form">
             <form action="" method="post">
               <input
+                class="email"
                 type="email"
                 name="email"
-                id="email"
                 placeholder="email@example.com"
                 required
               />
@@ -300,7 +297,9 @@
           <form class="sub-form" action="#" method="post">
             <div class="date-tele">
               <div class="date-field">
-                <label class="date-label" for="text">Дата</label>
+                <label title="Попався" class="date-label" for="text"
+                  >Дата</label
+                >
                 <input
                   class="date-input"
                   type="text"
@@ -351,16 +350,33 @@
         <p class="for-delivery">Для заказов по телефону:</p>
         <h4 class="adress-tel">+7 (812) 812-12-12</h4>
         <p class="work-time">(с 10 до 20 ежедневно)</p>
-        <a href="#">Форма обратной связи</a>
-        <div class="popup-bg">
-          <div class="popup">
-            <h3>Мы обязательно ответим вам!</h3>
-            <form action="#" method="post">
-              <input type="text" />
-              <input type="email" />
-              <input type="textarea" />
-              <button>Отправить</button>
-            </form>
+
+        <a href="#popup-bg" class="open-popup popupLink"
+          >Форма обратной связи</a
+        >
+        <!-- Форма обратной связи -->
+        <div id="popup-bg" class="popup-bg">
+          <div class="popup-body">
+            <!-- <a class="popup-area" href=""></a> -->
+            <div class="popup-content">
+              <a class="close-popup" href="#">
+                <img src="/images/Cross.svg" alt="close-popup"
+              /></a>
+              <form action="#" method="post">
+                <h3>Мы обязательно ответим вам!</h3>
+                <input type="text" required placeholder="Имя и фамилия" />
+                <input type="email" required placeholder="email@example.com" />
+                <textarea
+                  name="textarea"
+                  maxlength="100"
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="В свободной форме"
+                ></textarea>
+                <button>Отправить</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -400,6 +416,7 @@
       </div>
     </footer>
 
-    <script src="/js.js"></script>
+    <script src="/slider.js"></script>
+    <script src="/popups.js"></script>
   </body>
 </html>
