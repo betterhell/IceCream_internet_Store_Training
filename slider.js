@@ -1,14 +1,16 @@
 // Слайдер
+const leftButton = document.querySelector(".carousel-left");
+const rightButton = document.querySelector(".carousel-right");
 
 let slideIndex = 1;
 
-const leftSlide = () => {
+leftButton.addEventListener("click", () => {
   showSlides((slideIndex -= 1));
-};
+});
 
-const rightSlide = () => {
+rightButton.addEventListener("click", () => {
   showSlides((slideIndex += 1));
-};
+});
 
 const currentSlide = (n) => {
   showSlides((slideIndex = n));
@@ -38,3 +40,52 @@ const showSlides = (n) => {
   text[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].classList.add("active");
 };
+
+// --------------------ЖИЖА
+
+const changeBgColor = (color1, color2, color3) => {
+  // let colors = ["#FEAFC3", "#69A9FF", "#FCC850"];
+  const prevButton = document.querySelector(".carousel-left");
+  const nextButton = document.querySelector(".carousel-right");
+  let body = document.querySelector("body");
+  let index = 1;
+
+  nextButton.addEventListener("click", function () {
+    switch (index) {
+      case 1:
+        body.style.backgroundColor = color2;
+        index = 2;
+        break;
+      case 2:
+        body.style.backgroundColor = color3;
+        index = 3;
+        break;
+      case 3:
+        body.style.backgroundColor = color1;
+        index = 1;
+        break;
+      default:
+        break;
+    }
+  });
+
+  prevButton.addEventListener("click", function () {
+    switch (index) {
+      case 1:
+        body.style.backgroundColor = color3;
+        index = 3;
+        break;
+      case 2:
+        body.style.backgroundColor = color1;
+        index = 1;
+        break;
+      case 3:
+        body.style.backgroundColor = color2;
+        index = 2;
+        break;
+      default:
+        break;
+    }
+  });
+};
+changeBgColor("#FEAFC3", "#69A9FF", "#FCC850");

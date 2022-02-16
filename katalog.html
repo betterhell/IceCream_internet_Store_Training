@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/Favicon/32.svg" tupe="image/x-icon" />
+    <link rel="stylesheet" href="/katalog.css" />
+    <title>Сливочное мороженое</title>
+  </head>
+  <body>
+    <body>
+      <header>
+        <div class="logo">
+          <a href="/index.html"
+            ><img src="/images/logo/Лого.svg" alt="Логотип"
+          /></a>
+        </div>
+  
+        <div class="navig">
+          <nav>
+            <ul>
+              <a class="catalogue" href="#"><li>Каталог</li></a>
+              <div class="catalogue-popup">
+                <a class="close-catalogue-popup" href="#"
+                  ><img src="/images/Cross.svg" alt="Закрыть"
+                /></a>
+                <a class="head-catalogue" href="#">Новинки</a>
+                <hr />
+                <a class="naming" href="/katalog.html">Сливочное</a>
+                <a class="naming" href="#">Щербеты</a>
+                <a class="naming" href="#">Фруктовый лед</a>
+                <a class="naming" href="#">Мелорин</a>
+              </div>
+              <a href="#"><li>Доставка и оплата</li></a>
+              <a href="#"><li>О компании</li></a>
+            </ul>
+          </nav>
+        </div>
+  
+        <div class="phone">
+          <h3>+7 800 555-86-28</h3>
+        </div>
+
+        <div class="buttons">
+          <div class="search">
+            <a class="open-search-popup" href="#">
+              <img class="img-search" src="/images/Search.svg" alt="Поиск"
+            /></a>
+            <!-- Поисковой попап -->
+            <div id="search-popup" class="search-popup">
+              <div class="search-pop-content">
+                <a class="close-search-popup" href="#"
+                  ><img src="/images/Cross.svg" alt="Закрыть"
+                /></a>
+                <input type="search" placeholder="Поиск по сайту" />
+              </div>
+            </div>
+          </div>
+          <div class="login">
+            <a class="open-login-popup" href="#"
+              ><img
+                class="img-login"
+                src="/images/Log-in.svg"
+                alt="Логин"
+              />Вход</a>
+
+            <div id="login-popup" class="login-popup">
+              <div class="login-pop-content">
+                <a class="close-login-popup" href="#"
+                  ><img src="/images/Cross.svg" alt="Закрыть"
+                /></a>
+                <h3>Личный кабинет</h3>
+                <input type="email" placeholder="email@example.com" />
+                <input type="password" placeholder="******" />
+                <a class="login-button" href="#">Войти</a>
+                <a href="#" class="restore-pass">Забыли пароль?</a>
+                <a class="registration" href="#">Регистрация</a>
+              </div>
+            </div>
+          </div>
+          <div class="cart">
+            <a href="">
+              <img class="img-cart" src="/images/Cart.svg" alt="Корзина" />Вход</a>
+          </div>
+        </div>
+      </header>
+
+      <div class="destin">
+          <div class="destination-catalogue">
+            <a class="main-dest" href="/index.html">Главная</a>
+            <a href="#"><img src="/images/chevrons-right.svg" alt=""></a>
+            <a class="off-dest" href="">Каталог</a>
+            <a href=""><img src="/images/chevrons-right.svg" alt=""></a>
+            <a class="current-dest" href="#">Сливочное</a>
+          </div>
+      </div>
+
+      <div class="main-txt">
+        <h2>Сливочное мороженое</h2>
+      </div>
+
+      <div class="main-content">
+        <div class="sorting">
+          <div class="first-floor-sort">
+            <div class="relevant-sort">
+              <p>Сортировка:</p>
+              <div class="stack-sort">
+                <ul class="menu_list">
+                  <li>
+                    <a class="pop-sort" href="">по популярности</a>
+                    <img class="arrow-sort" src="/images/Arrow-down.svg" alt="">
+                    <ul class="sub-menu">
+                      <li>
+                        <a href="">новинки</a>
+                      </li>
+                      <li>
+                      <a href="">по минимальной цене</a>
+                      </li>
+                      <li>
+                        <a href="">по максимальной цене</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="price-sort">
+               <p>Цена: 100 ₽ – 500 ₽</p>
+               <div class="price-input">
+                 <input class="ranger" type="range" name="ranger" min="100" max="500" id="ranger">
+               </div>
+            </div>
+
+            <div class="fat-sort">
+              <div class="info-fat">
+                <p>Жирность:</p>
+              </div>
+              <div class="fat-content">
+                <input class="first-fat-input fat-input" id="fat-1" name="fat" type="radio" value="">
+                <label class="fat-label" for="fat-1"><span>0%</span></label>
+                <input class="fat-input" id="fat-2" name="fat" type="radio" value="">
+                <label class="fat-label" for="fat-2"><span>до 10%</span></label>
+                <input class="fat-input" id="fat-3" name="fat" type="radio" value="">
+                <label class="fat-label" for="fat-3"><span>до 30%</span></label>
+                <input class="fat-input" id="fat-4" name="fat" type="radio" value="">
+                <label class="last-fat-label fat-label" for="fat-4"><span>выше 30%</span></label>
+              </div>
+            </div>
+          </div>
+          
+            <div class="fill-sort">
+              <div class="fillers">
+                <div class="info-filler">
+                    <p>Наполнители:</p>
+                </div>
+                <div class="second-floor-sort">
+                  <div class="fill-input">
+                    <input class="fill-input-1 fill-inputs" id="fill-1" type="checkbox" name="filler" value="">
+                    <label class="fill-label fill-label-1" for="fill-1"><span>школоданые</span></label>
+                    <input class="fill-inputs" id="fill-2" type="checkbox" name="filler" value="">
+                    <label class="fill-label" for="fill-2"><span>сахарные посыпки</span></label>
+                    <input class="fill-inputs" id="fill-3" type="checkbox" name="filler" value="">
+                    <label class="fill-label" for="fill-3"><span>фрукты</span></label>
+                    <input class="fill-inputs" id="fill-4" type="checkbox" name="filler" value="">
+                    <label class="fill-label" for="fill-4"><span>сиропы</span></label>
+                    <input class="fill-inputs" id="fill-5" type="checkbox" name="filler" value="">
+                    <label class="fill-label" for="fill-5"><span>джемы</span></label>
+                  </div>
+              
+        
+                <div class="sort-button">
+                  <input class="submit-button" type="submit" value="Применить">
+                </div>
+              </div>
+            </div>
+        </div>
+
+      </div>
+        
+    
+
+
+
+      <script src="/popups.js"></script>
+  </body>
+</html>
