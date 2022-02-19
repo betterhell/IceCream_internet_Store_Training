@@ -96,9 +96,21 @@
           </div>
         </div>
         <div class="cart">
-          <a href="">
-            <img class="img-cart" src="/images/Cart.svg" alt="Корзина" />Вход</a
+          <a class="open-cart-popup" href="#"
+            ><img
+              class="img-cart"
+              src="/images/Cart.svg"
+              alt="Корзина"
+            />Вход</a
           >
+          <div class="cart-popup">
+            <div class="cart-popup-content">
+              <a class="close-cart-popup" href="#"
+                ><img src="/images/Cross.svg" alt="Закрыть"
+              /></a>
+              <h3>Ваша корзина пока пуста</h3>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -474,14 +486,10 @@
         <div class="footer-section-2">
           <nav>
             <ul>
-              <!-- <div class="left-sect"> -->
               <a class="for-provider" href="#"><li>Для поставщиков</li></a>
               <a href="#"><li>Наши документы</li></a>
-              <!-- </div> -->
-              <!-- <div class="right-sect"> -->
               <a href="#"><li>О производстве</li></a>
               <a href="#"><li>Экологические стандарты</li></a>
-              <!-- </div> -->
             </ul>
           </nav>
         </div>
@@ -491,8 +499,14 @@
       </div>
     </footer>
 
+    <div class="back-to-top">
+      <a class="to-top-tail" href="##"
+        ><img class="top-btn-img" src="/images/ice-cream-cone.svg" alt=""
+      /></a>
+    </div>
+
     <script src="/slider.js"></script>
     <script src="/popups.js"></script>
-    <script src="/background.js"></script>
+    <script src="/back-to-top.js"></script>
   </body>
 </html>

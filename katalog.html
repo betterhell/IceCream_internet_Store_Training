@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/images/Favicon/32.svg" tupe="image/x-icon" />
     <link rel="stylesheet" href="/katalog.css" />
-    <title>Сливочное мороженое</title>
+    <title>GllacyShop - Сливочное мороженое</title>
   </head>
-  <body>
     <body>
       <header>
         <div class="logo">
@@ -80,51 +79,101 @@
             </div>
           </div>
           <div class="cart">
-            <a href="">
-              <img class="img-cart" src="/images/Cart.svg" alt="Корзина" />Вход</a>
+            <a class="open-cart-popup" href="#"
+              ><img
+                class="img-cart"
+                src="/images/Cart.svg"
+                alt="Корзина"
+              /><span>Пусто</span></a>
+            <div class="cart-popup">
+              <div class="cart-popup-content">
+                <a class="close-cart-popup" href="#"
+                  ><img src="/images/Cross.svg" alt="Закрыть"
+                /></a>
+                <h3>Корзина</h3>
+              
+                <div class="carting-items">
+                  <div class="cart-item">
+                    <img class="img-item" src="/images/mini/miniItemMalina.svg" alt="">
+                      <div class="name-weight">
+                        <h6 class="name-item">Малинка</h6>
+                        <p class="weight-item" >1 кг х 310 ₽</p>
+                      </div>
+                    <h6 class="price-item">310 ₽</h6>
+                    <a class="delete-item" href="#"
+                      ><img src="/images/Cross.svg" alt="Закрыть"
+                    /></a>
+                  </div>
+                    <div class="cart-item">
+                      <img class="img-item" src="/images/mini/miniItemBubble.svg" alt="">
+                        <div class="name-weight">
+                          <h6 class="name-item">Бабл-гам</h6>
+                          <p class="weight-item">1,5 кг х 320 ₽</p>
+                        </div>
+                      <h6 class="price-item">480 ₽</h6>
+                      <a class="delete-item" href="#"
+                        ><img src="/images/Cross.svg" alt="Закрыть"
+                      /></a>
+                    </div>
+                </div>
+              
+
+                  <div class="line"></div>
+                    
+                  <div class="final-order-things">
+                      <div class="order-btn">
+                        <a href="#">Оформить заказ</a>
+                      </div>
+                      <h6 class="final-price">Итого: 790 ₽</h6>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </header>
 
-      <div class="destin">
-          <div class="destination-catalogue">
-            <a class="main-dest" href="/index.html">Главная</a>
-            <a href="#"><img src="/images/chevrons-right.svg" alt=""></a>
-            <a class="off-dest" href="">Каталог</a>
-            <a href=""><img src="/images/chevrons-right.svg" alt=""></a>
-            <a class="current-dest" href="#">Сливочное</a>
-          </div>
+      <!-- Место нахождения -->
+    <div class="destin">
+      <div class="destination-catalogue">
+        <a class="main-dest" href="/index.html">Главная</a>
+        <a href="#"><img src="/images/chevrons-right.svg" alt=""></a>
+        <a class="off-dest" href="">Каталог</a>
+        <a href=""><img src="/images/chevrons-right.svg" alt=""></a>
+        <a class="current-dest" href="#">Сливочное</a>
       </div>
+    </div>
 
-      <div class="main-txt">
-        <h2>Сливочное мороженое</h2>
-      </div>
-
-      <div class="main-content">
-        <div class="sorting">
-          <div class="first-floor-sort">
-            <div class="relevant-sort">
-              <p>Сортировка:</p>
-              <div class="stack-sort">
-                <ul class="menu_list">
-                  <li>
-                    <a class="pop-sort" href="">по популярности</a>
-                    <img class="arrow-sort" src="/images/Arrow-down.svg" alt="">
-                    <ul class="sub-menu">
-                      <li>
-                        <a href="">новинки</a>
-                      </li>
-                      <li>
-                      <a href="">по минимальной цене</a>
-                      </li>
-                      <li>
-                        <a href="">по максимальной цене</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
+    <div class="main-txt">
+      <h2>Сливочное мороженое</h2>
+    </div>
+    <!-- Сортировка -->
+    <div class="main-content">
+      <div class="sorting">
+        <div class="first-floor-sort">
+          <div class="relevant-sort">
+            <p>Сортировка:</p>
+            <div class="stack-sort">
+              <ul class="menu_list">
+                <li>
+                  <a class="pop-sort" href="">по популярности</a>
+                  <img class="arrow-sort" src="/images/Arrow-down.svg" alt="">
+                   <ul class="sub-menu">
+                    <li>
+                      <a href="">новинки</a>
+                    </li>
+                    <li>
+                    <a href="">по минимальной цене</a>
+                    </li>
+                    <li>
+                      <a href="">по максимальной цене</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </div>
+          </div>
 
             <div class="price-sort">
                <p>Цена: 100 ₽ – 500 ₽</p>
@@ -175,14 +224,211 @@
                 </div>
               </div>
             </div>
-        </div>
-
+          </div>
+        </div> 
       </div>
-        
-    
+          <!-- Каталог -->
+          <div class="container">
+            <div class="articles">
+              <div class="art1">
+                <img src="/images/mini/Photo.svg" alt="" />
+                <h4 class="head-art1">Малинка</h4>
+                <p>Сливочное мороженое с малиновым джемом</p>
+                <div class="art1-in">
+                  <h4 class="price">310 ₽/кг</h4>
+                  <a class="articles-link" href="#"
+                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+              <div class="art2">
+                <img src="/images/mini/Photo1.svg" alt="" />
+                <h4 class="head-art2">Малинка</h4>
+                <p>Фисташковый пломбир с кусочками шоколада</p>
+                <div class="art2-in">
+                  <h4 class="price">340 ₽/кг</h4>
+                  <a class="articles-link" href="#"
+                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+              <div class="art3">
+                <img src="/images/mini/Photo2.svg" alt="" />
+                <h4 class="head-art3">Фисташка</h4>
+                <p>Крем-брюле с черничным джемом</p>
+                <div class="art3-in">
+                  <h4 class="price">330 ₽/кг</h4>
+                  <a class="articles-link" href="#"
+                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+              <div class="art4">
+                <img src="/images/mini/Photo3.svg" alt="" />
+                <h4 class="head-art4">Бабл-гам</h4>
+                <p>Ванильный пломбир со сладкой посыпкой</p>
+                <div class="art4-in">
+                  <h4 class="price">320 ₽/кг</h4>
+                  <a class="articles-link" href="#"
+                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="articles">
+              <div class="art1">
+                <img src="/images//ejevika.svg" alt="" />
+                <h4 class="head-art1">Ежевика</h4>
+                <p>Сливочное мороженое с ежевичным джемом</p>
+                <div class="art1-in">
+                  <h4 class="price">330 ₽/кг</h4>
+                  <a class="articles-link" href="#"
+                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+              <div class="art2">
+                <img src="/images//banan.svg" alt="" />
+                <h4 class="head-art2">Банан</h4>
+                <p>Сливочный пломбир
+                  с банановым вкусом</p>
+                <div class="art2-in">
+                  <h4 class="price">340 ₽/кг</h4>
+                  <a class="articles-link" href="#"
+                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+              <div class="art3">
+                <img src="/images/mini/Photo2.svg" alt="" />
+                <h4 class="head-art3">Шоколадка</h4>
+                <p>Классический шоколадный пломбир</p>
+                <div class="art3-in">
+                  <h4 class="price">270 ₽/кг</h4>
+                  <a class="articles-link" href="#"
+                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+              <div class="art4">
+                <img src="/images/klubnika.svg" alt="" />
+                <h4 class="head-art4">Клубничка</h4>
+                <p>Сливочный пломбир
+                  с клубничным вкусом</p>
+                <div class="art4-in">
+                  <h4 class="price">300 ₽/кг</h4>
+                  <a class="articles-link" href="#"
+                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div> 
+          
+          <div class="container">
+            <div class="articles">
+              <div class="art1">
+                <img src="/images/limon.svg" alt="" />
+                <h4 class="head-art1">Лимон</h4>
+                <p>Освежающий лимонный сорбет</p>
+                <div class="art1-in">
+                  <h4 class="price">310 ₽/кг</h4>
+                  <a class="articles-link" href="#"
+                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+              <div class="art2">
+                <img src="/images/mentol.svg" alt="" />
+                <h4 class="head-art2">Ментол</h4>
+                <p>Сливочный пломбир
+                  с ментоловым сиропом</p>
+                <div class="art2-in">
+                  <h4 class="price">320 ₽/кг</h4>
+                  <a class="articles-link" href="#"
+                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+              <div class="art3">
+                <img src="/images/oreh.svg" alt="" />
+                <h4 class="head-art3">Орешек</h4>
+                <p>Фисташковый пломбир с шоколадным сиропом</p>
+                <div class="art3-in">
+                  <h4 class="price">360 ₽/кг</h4>
+                  <a class="articles-link" href="#"
+                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+              <div class="art4">
+                <img src="/images/krem-brule.svg" alt="" />
+                <h4 class="head-art4">Крем-брюле</h4>
+                <p>Классическое крем-брюле </p>
+                <div class="art4-in">
+                  <h4 class="price">280 ₽/кг</h4>
+                  <a class="articles-link" href="#"
+                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Пагинация -->
+          <div class="pagination">
+            <div class="pag-button">
+              <input class="btn" value="Показать еще" type="submit">
+            </div>
+
+            <div class="pagin">
+              <a class="pagi-left" href=""><img src="/images/Arrow-left.svg" alt=""></a>
+              <a class="pagi-right" href=""><img src="/images/Arrow-right.svg" alt=""></a>
+              <a class="pag" href="#"><span>1</span></a>
+              <a class="pag" href="#"><span>2</span></a>
+              <a class="pag" href="#"><span>3</span></a>
+              <a class="pag" href="#"><span>4</span></a>
+              <a class="pag" href="#"><span>5</span></a>
+            </div>
+          </div>
+
+            <!-- Footer -->
+            <footer>
+              <div class="footer">
+                <div class="footer-section-1">
+                  <a class="fb" href="#"
+                    ><img src="/images/FacebookWhite.svg" alt="Facebook"
+                  /></a>
+                  <a class="inst" href="#"
+                    ><img src="/images/InstagramWhite.svg" alt="Instagram"
+                  /></a>
+                  <a class="vk" href="#"
+                    ><img src="/images/VKwhite.svg" alt="Vkontakte"
+                  /></a>
+                </div>
+                <div class="footer-section-2">
+                  <nav>
+                    <ul>
+                      <a class="for-provider" href="#"><li>Для поставщиков</li></a>
+                      <a href="#"><li>Наши документы</li></a>
+                      <a href="#"><li>О производстве</li></a>
+                      <a href="#"><li>Экологические стандарты</li></a>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="footer-section-3">
+                  <p>Сделано мной в 2022</p>
+                </div>
+              </div>
+            </footer>    
+
+            
 
 
 
       <script src="/popups.js"></script>
-  </body>
+    </body>
 </html>

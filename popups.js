@@ -1,5 +1,10 @@
 // Список попапов
-const popUps = [".search-popup", ".login-popup", ".catalogue-popup"];
+const popUps = [
+  ".search-popup",
+  ".login-popup",
+  ".catalogue-popup",
+  ".cart-popup",
+];
 
 // Закрытие всех попапов
 const closeAllPopUp = () => {
@@ -35,6 +40,9 @@ popUpInit(".open-login-popup", ".close-login-popup", ".login-popup");
 
 // Попап каталога
 popUpInit(".catalogue", ".close-catalogue-popup", ".catalogue-popup");
+
+// Попап корзины
+popUpInit(".open-cart-popup", ".close-cart-popup", ".cart-popup");
 
 // Форма обратной связи
 
