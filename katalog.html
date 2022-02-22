@@ -157,17 +157,17 @@
             <div class="stack-sort">
               <ul class="menu_list">
                 <li>
-                  <a class="pop-sort" href="">по популярности</a>
+                  <a class="pop-sort" data-id="popular" href="">по популярности</a>
                   <img class="arrow-sort" src="/images/Arrow-down.svg" alt="">
                    <ul class="sub-menu">
                     <li>
-                      <a href="">новинки</a>
+                      <a class="newCreamsButton" href="##">новинки</a>
                     </li>
                     <li>
-                    <a href="">по минимальной цене</a>
+                    <a class="minPriceButton" href="##">по минимальной цене</a>
                     </li>
                     <li>
-                      <a href="">по максимальной цене</a>
+                      <a class="maxPriceButton" href="##">по максимальной цене</a>
                     </li>
                   </ul>
                 </li>
@@ -187,13 +187,13 @@
                 <p>Жирность:</p>
               </div>
               <div class="fat-content">
-                <input class="first-fat-input fat-input" id="fat-1" name="fat" type="radio" value="">
+                <input data-fat="0" class="first-fat-input fat-input" id="fat-1" name="fat" type="radio" value="">
                 <label class="fat-label" for="fat-1"><span>0%</span></label>
-                <input class="fat-input" id="fat-2" name="fat" type="radio" value="">
+                <input data-fat="10" class="fat-input" id="fat-2" name="fat" type="radio" value="">
                 <label class="fat-label" for="fat-2"><span>до 10%</span></label>
-                <input class="fat-input" id="fat-3" name="fat" type="radio" value="">
+                <input data-fat="30" class="fat-input" id="fat-3" name="fat" type="radio" value="">
                 <label class="fat-label" for="fat-3"><span>до 30%</span></label>
-                <input class="fat-input" id="fat-4" name="fat" type="radio" value="">
+                <input data-fat="31" class="fat-input" id="fat-4" name="fat" type="radio" value="">
                 <label class="last-fat-label fat-label" for="fat-4"><span>выше 30%</span></label>
               </div>
             </div>
@@ -206,15 +206,15 @@
                 </div>
                 <div class="second-floor-sort">
                   <div class="fill-input">
-                    <input class="fill-input-1 fill-inputs" id="fill-1" type="checkbox" name="filler" value="">
-                    <label class="fill-label fill-label-1" for="fill-1"><span>школоданые</span></label>
-                    <input class="fill-inputs" id="fill-2" type="checkbox" name="filler" value="">
+                    <input data-fill="шоколад" class="fill-input-1 fill-inputs" id="fill-1" type="checkbox" name="filler" value="">
+                    <label data-fill="шоколад" class="fill-label fill-label-1" for="fill-1"><span>школоданые</span></label>
+                    <input data-fill="посыпка" class="fill-inputs" id="fill-2" type="checkbox" name="filler" value="">
                     <label class="fill-label" for="fill-2"><span>сахарные посыпки</span></label>
-                    <input class="fill-inputs" id="fill-3" type="checkbox" name="filler" value="">
+                    <input data-fill="фрукты" class="fill-inputs" id="fill-3" type="checkbox" name="filler" value="">
                     <label class="fill-label" for="fill-3"><span>фрукты</span></label>
-                    <input class="fill-inputs" id="fill-4" type="checkbox" name="filler" value="">
+                    <input data-fill="сироп" class="fill-inputs" id="fill-4" type="checkbox" name="filler" value="">
                     <label class="fill-label" for="fill-4"><span>сиропы</span></label>
-                    <input class="fill-inputs" id="fill-5" type="checkbox" name="filler" value="">
+                    <input data-fill="джем" class="fill-inputs" id="fill-5" type="checkbox" name="filler" value="">
                     <label class="fill-label" for="fill-5"><span>джемы</span></label>
                   </div>
               
@@ -229,8 +229,8 @@
       </div>
           <!-- Каталог -->
           <div class="container">
-            <div class="articles">
-              <div class="art1">
+
+              <div data-fill="джем" data-fat="0" data-sort="310" class="art1 fat30 gem">
                 <img src="/images/mini/Photo.svg" alt="" />
                 <h4 class="head-art1">Малинка</h4>
                 <p>Сливочное мороженое с малиновым джемом</p>
@@ -241,9 +241,11 @@
                   /></a>
                 </div>
               </div>
-              <div class="art2">
+            
+
+              <div data-fill="шоколад" data-fat="10" data-sort="340" class="art1 fat10 chocolate">
                 <img src="/images/mini/Photo1.svg" alt="" />
-                <h4 class="head-art2">Малинка</h4>
+                <h4 class="head-art2">Фисташка</h4>
                 <p>Фисташковый пломбир с кусочками шоколада</p>
                 <div class="art2-in">
                   <h4 class="price">340 ₽/кг</h4>
@@ -252,9 +254,10 @@
                   /></a>
                 </div>
               </div>
-              <div class="art3">
+
+              <div data-fat="10" data-fill="джем" data-sort="330" class="art1 fat0 gem">
                 <img src="/images/mini/Photo2.svg" alt="" />
-                <h4 class="head-art3">Фисташка</h4>
+                <h4 class="head-art3">Черника</h4>
                 <p>Крем-брюле с черничным джемом</p>
                 <div class="art3-in">
                   <h4 class="price">330 ₽/кг</h4>
@@ -263,7 +266,8 @@
                   /></a>
                 </div>
               </div>
-              <div class="art4">
+
+              <div data-fill="посыпка" data-fat="30" data-sort="320" class="art1 fat10 posipka">
                 <img src="/images/mini/Photo3.svg" alt="" />
                 <h4 class="head-art4">Бабл-гам</h4>
                 <p>Ванильный пломбир со сладкой посыпкой</p>
@@ -274,12 +278,8 @@
                   /></a>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <div class="container">
-            <div class="articles">
-              <div class="art1">
+              <div data-fill="джем" data-sort="330" class="art1 fat30 gem">
                 <img src="/images//ejevika.svg" alt="" />
                 <h4 class="head-art1">Ежевика</h4>
                 <p>Сливочное мороженое с ежевичным джемом</p>
@@ -290,7 +290,8 @@
                   /></a>
                 </div>
               </div>
-              <div class="art2">
+
+              <div data-fill="фрукты" data-fat="30" data-sort="340" class="art1 fat10 fruits">
                 <img src="/images//banan.svg" alt="" />
                 <h4 class="head-art2">Банан</h4>
                 <p>Сливочный пломбир
@@ -302,7 +303,8 @@
                   /></a>
                 </div>
               </div>
-              <div class="art3">
+
+              <div data-fill="шоколад" data-sort="270" class="art1 fat0 chocolate">
                 <img src="/images/mini/Photo2.svg" alt="" />
                 <h4 class="head-art3">Шоколадка</h4>
                 <p>Классический шоколадный пломбир</p>
@@ -313,7 +315,8 @@
                   /></a>
                 </div>
               </div>
-              <div class="art4">
+
+              <div data-fill="фрукты" data-fat="30" data-sort="300" class="art1 fat30 fruits">
                 <img src="/images/klubnika.svg" alt="" />
                 <h4 class="head-art4">Клубничка</h4>
                 <p>Сливочный пломбир
@@ -325,12 +328,8 @@
                   /></a>
                 </div>
               </div>
-            </div>
-          </div> 
           
-          <div class="container">
-            <div class="articles">
-              <div class="art1">
+              <div data-fill="фрукты" data-sort="310" class="art1 fat31 fruits">
                 <img src="/images/limon.svg" alt="" />
                 <h4 class="head-art1">Лимон</h4>
                 <p>Освежающий лимонный сорбет</p>
@@ -341,7 +340,8 @@
                   /></a>
                 </div>
               </div>
-              <div class="art2">
+
+              <div data-fill="сироп" data-fat="30" data-sort="320" class="art1 fat30 syrup">
                 <img src="/images/mentol.svg" alt="" />
                 <h4 class="head-art2">Ментол</h4>
                 <p>Сливочный пломбир
@@ -353,7 +353,8 @@
                   /></a>
                 </div>
               </div>
-              <div class="art3">
+
+              <div data-fill="сироп шоколад" data-sort="360" class="art1 syrup">
                 <img src="/images/oreh.svg" alt="" />
                 <h4 class="head-art3">Орешек</h4>
                 <p>Фисташковый пломбир с шоколадным сиропом</p>
@@ -364,7 +365,8 @@
                   /></a>
                 </div>
               </div>
-              <div class="art4">
+
+              <div data-sort="280" class="art1 fat31">
                 <img src="/images/krem-brule.svg" alt="" />
                 <h4 class="head-art4">Крем-брюле</h4>
                 <p>Классическое крем-брюле </p>
@@ -373,7 +375,6 @@
                   <a class="articles-link" href="#"
                     ><img class="articles-icon" src="/images/red cart.svg" alt=""
                   /></a>
-                </div>
               </div>
             </div>
           </div>
@@ -428,7 +429,8 @@
             
 
 
-
-      <script src="/popups.js"></script>
+    </div>
+      <!-- <script src="/popups.js"></script> -->
+      <script src="/sorting.js"></script>
     </body>
 </html>

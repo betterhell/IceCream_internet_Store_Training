@@ -44,7 +44,6 @@ const showSlides = (n) => {
 // --------------------ЖИЖА
 
 const changeBgColor = (color1, color2, color3) => {
-  // let colors = ["#FEAFC3", "#69A9FF", "#FCC850"];
   const prevButton = document.querySelector(".carousel-left");
   const nextButton = document.querySelector(".carousel-right");
   let body = document.querySelector("body");
