@@ -117,7 +117,6 @@
                     </div>
                 </div>
               
-
                   <div class="line"></div>
                     
                   <div class="final-order-things">
@@ -153,31 +152,23 @@
       <div class="sorting">
         <div class="first-floor-sort">
           <div class="relevant-sort">
-            <p>Сортировка:</p>
-            <div class="stack-sort">
-              <ul class="menu_list">
-                <li>
-                  <a class="pop-sort" data-id="popular" href="">по популярности</a>
-                  <img class="arrow-sort" src="/images/Arrow-down.svg" alt="">
-                   <ul class="sub-menu">
-                    <li>
-                      <a class="newCreamsButton" href="##">новинки</a>
-                    </li>
-                    <li>
-                    <a class="minPriceButton" href="##">по минимальной цене</a>
-                    </li>
-                    <li>
-                      <a class="maxPriceButton" href="##">по максимальной цене</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+            <div class="sorting">
+              <label class="select-sort-label" for="select-sort">Сортировка:</label>
+              <select  name="select-sort" id="select-sort">
+                <option value="по популярности">по популярности</option>
+                <option value="новинки">новинки</option>
+                <option value="по минимальной цене">по минимальной цене</option>
+                <option value="по максимальной цене">по максимальной цене</option>
+              </select>
             </div>
           </div>
+
+          
 
             <div class="price-sort">
                <p>Цена: 100 ₽ – 500 ₽</p>
                <div class="price-input">
+                 <input class="ranger" type="range" name="ranger" min="100" max="500" id="ranger">
                  <input class="ranger" type="range" name="ranger" min="100" max="500" id="ranger">
                </div>
             </div>
@@ -220,7 +211,7 @@
               
         
                 <div class="sort-button">
-                  <input class="submit-button" type="submit" value="Применить">
+                  <input id="submit-sort" class="submit-button" type="submit" value="Применить">
                 </div>
               </div>
             </div>
@@ -228,156 +219,7 @@
         </div> 
       </div>
           <!-- Каталог -->
-          <div class="container">
-
-              <div data-fill="джем" data-fat="0" data-sort="310" class="art1 fat30 gem">
-                <img src="/images/mini/Photo.svg" alt="" />
-                <h4 class="head-art1">Малинка</h4>
-                <p>Сливочное мороженое с малиновым джемом</p>
-                <div class="art1-in">
-                  <h4 class="price">310 ₽/кг</h4>
-                  <a class="articles-link" href="#"
-                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
-                  /></a>
-                </div>
-              </div>
-            
-
-              <div data-fill="шоколад" data-fat="10" data-sort="340" class="art1 fat10 chocolate">
-                <img src="/images/mini/Photo1.svg" alt="" />
-                <h4 class="head-art2">Фисташка</h4>
-                <p>Фисташковый пломбир с кусочками шоколада</p>
-                <div class="art2-in">
-                  <h4 class="price">340 ₽/кг</h4>
-                  <a class="articles-link" href="#"
-                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
-                  /></a>
-                </div>
-              </div>
-
-              <div data-fat="10" data-fill="джем" data-sort="330" class="art1 fat0 gem">
-                <img src="/images/mini/Photo2.svg" alt="" />
-                <h4 class="head-art3">Черника</h4>
-                <p>Крем-брюле с черничным джемом</p>
-                <div class="art3-in">
-                  <h4 class="price">330 ₽/кг</h4>
-                  <a class="articles-link" href="#"
-                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
-                  /></a>
-                </div>
-              </div>
-
-              <div data-fill="посыпка" data-fat="30" data-sort="320" class="art1 fat10 posipka">
-                <img src="/images/mini/Photo3.svg" alt="" />
-                <h4 class="head-art4">Бабл-гам</h4>
-                <p>Ванильный пломбир со сладкой посыпкой</p>
-                <div class="art4-in">
-                  <h4 class="price">320 ₽/кг</h4>
-                  <a class="articles-link" href="#"
-                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
-                  /></a>
-                </div>
-              </div>
-
-              <div data-fill="джем" data-sort="330" class="art1 fat30 gem">
-                <img src="/images//ejevika.svg" alt="" />
-                <h4 class="head-art1">Ежевика</h4>
-                <p>Сливочное мороженое с ежевичным джемом</p>
-                <div class="art1-in">
-                  <h4 class="price">330 ₽/кг</h4>
-                  <a class="articles-link" href="#"
-                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
-                  /></a>
-                </div>
-              </div>
-
-              <div data-fill="фрукты" data-fat="30" data-sort="340" class="art1 fat10 fruits">
-                <img src="/images//banan.svg" alt="" />
-                <h4 class="head-art2">Банан</h4>
-                <p>Сливочный пломбир
-                  с банановым вкусом</p>
-                <div class="art2-in">
-                  <h4 class="price">340 ₽/кг</h4>
-                  <a class="articles-link" href="#"
-                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
-                  /></a>
-                </div>
-              </div>
-
-              <div data-fill="шоколад" data-sort="270" class="art1 fat0 chocolate">
-                <img src="/images/mini/Photo2.svg" alt="" />
-                <h4 class="head-art3">Шоколадка</h4>
-                <p>Классический шоколадный пломбир</p>
-                <div class="art3-in">
-                  <h4 class="price">270 ₽/кг</h4>
-                  <a class="articles-link" href="#"
-                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
-                  /></a>
-                </div>
-              </div>
-
-              <div data-fill="фрукты" data-fat="30" data-sort="300" class="art1 fat30 fruits">
-                <img src="/images/klubnika.svg" alt="" />
-                <h4 class="head-art4">Клубничка</h4>
-                <p>Сливочный пломбир
-                  с клубничным вкусом</p>
-                <div class="art4-in">
-                  <h4 class="price">300 ₽/кг</h4>
-                  <a class="articles-link" href="#"
-                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
-                  /></a>
-                </div>
-              </div>
-          
-              <div data-fill="фрукты" data-sort="310" class="art1 fat31 fruits">
-                <img src="/images/limon.svg" alt="" />
-                <h4 class="head-art1">Лимон</h4>
-                <p>Освежающий лимонный сорбет</p>
-                <div class="art1-in">
-                  <h4 class="price">310 ₽/кг</h4>
-                  <a class="articles-link" href="#"
-                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
-                  /></a>
-                </div>
-              </div>
-
-              <div data-fill="сироп" data-fat="30" data-sort="320" class="art1 fat30 syrup">
-                <img src="/images/mentol.svg" alt="" />
-                <h4 class="head-art2">Ментол</h4>
-                <p>Сливочный пломбир
-                  с ментоловым сиропом</p>
-                <div class="art2-in">
-                  <h4 class="price">320 ₽/кг</h4>
-                  <a class="articles-link" href="#"
-                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
-                  /></a>
-                </div>
-              </div>
-
-              <div data-fill="сироп шоколад" data-sort="360" class="art1 syrup">
-                <img src="/images/oreh.svg" alt="" />
-                <h4 class="head-art3">Орешек</h4>
-                <p>Фисташковый пломбир с шоколадным сиропом</p>
-                <div class="art3-in">
-                  <h4 class="price">360 ₽/кг</h4>
-                  <a class="articles-link" href="#"
-                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
-                  /></a>
-                </div>
-              </div>
-
-              <div data-sort="280" class="art1 fat31">
-                <img src="/images/krem-brule.svg" alt="" />
-                <h4 class="head-art4">Крем-брюле</h4>
-                <p>Классическое крем-брюле </p>
-                <div class="art4-in">
-                  <h4 class="price">280 ₽/кг</h4>
-                  <a class="articles-link" href="#"
-                    ><img class="articles-icon" src="/images/red cart.svg" alt=""
-                  /></a>
-              </div>
-            </div>
-          </div>
+          <div id="catalog" class="container"></div>
 
           <!-- Пагинация -->
           <div class="pagination">
@@ -430,7 +272,8 @@
 
 
     </div>
-      <!-- <script src="/popups.js"></script> -->
-      <script src="/sorting.js"></script>
+      <script src="/ranger.js"></script>
+      <script src="/popups.js"></script>
+      <script src="/catalog.js"></script>
     </body>
 </html>

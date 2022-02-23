@@ -2,11 +2,16 @@ const backTop = () => {
   const trackScroll = () => {
     let scrolled = window.pageYOffset;
     let coords = document.documentElement.clientHeight;
-
+    let widthClient = window.screen.width;
+    const max = 1500;
+    
     if (scrolled > coords) {
       goToTopBtn.classList.add("active");
     }
     if (scrolled < coords) {
+      goToTopBtn.classList.remove("active");
+    }
+    if (widthClient <= max) {
       goToTopBtn.classList.remove("active");
     }
   };

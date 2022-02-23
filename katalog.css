@@ -724,10 +724,17 @@ header {
 .sorting {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+.select-sort-label {
+  margin-bottom: 13px;
+  padding-left: 18px;
 }
 
 .first-floor-sort {
   display: flex;
+  padding-bottom: 16px;
 }
 
 /* Сортировка меню */
@@ -764,35 +771,20 @@ header {
   padding-left: 0px;
 }
 
-.sub-menu {
-  position: absolute;
-  display: none;
-  background-color: rgb(255, 255, 255);
-  border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
+#select-sort {
   width: 196px;
-  box-sizing: border-box;
-  padding: 10px 10px;
-  margin-top: 10px;
-}
-
-.menu_list {
-  background-image: url(/images/menuSorting.svg);
-  background-repeat: no-repeat;
-  width: 196px;
+  border-radius: 25px;
   height: 36px;
-  position: relative;
-  transition: 0.5s;
+  text-align: center;
+  background-color: #f8c3cf;
+  border: none;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
 }
-
-.arrow-sort {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-}
-
-.menu_list:hover .sub-menu {
-  display: block;
+#select-sort option {
+  cursor: pointer;
 }
 
 /* Сортировка цены */
@@ -827,6 +819,7 @@ header {
   width: 150px;
   height: 2px;
   outline: none;
+  position: absolute;
 }
 
 .ranger::-webkit-slider-thumb {
@@ -845,6 +838,7 @@ header {
   background: #2d3440;
   border-radius: 50%;
   cursor: pointer;
+  position: relative;
 }
 
 /* Жирность */
@@ -1030,11 +1024,7 @@ header {
   flex-wrap: wrap;
 }
 
-.head-art1,
-.head-art2,
-.head-art3,
-.head-art4 {
-  font-family: "Inter", sans-serif;
+.head-art {
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -1045,7 +1035,6 @@ header {
 }
 
 .container p {
-  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

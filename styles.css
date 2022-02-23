@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap");
-*,
-* {
-  /* scroll-behavior: smooth; */
-}
 
 html {
   position: relative;
@@ -2036,73 +2032,6 @@ footer {
 }
 
 /* --------------------------------------------------------- */
-/* КАТАЛОГ */
-
-.all-sorting {
-  display: flex;
-}
-
-.sorting {
-}
-.destination-catalogue a {
-  color: #2d3440;
-  padding-right: 10px;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.current-dest {
-  text-decoration: none;
-}
-
-/* Оглавление страницы */
-.popular-sort {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.popular-sort p {
-  margin: 0px;
-  padding-left: 15px;
-}
-
-.main-txt {
-  font-weight: 900;
-  font-size: 32px;
-  line-height: 46px;
-  color: #2d3440;
-}
-
-/* Сортировка */
-
-.main-content {
-  display: flex;
-}
-
-.fillers {
-  display: flex;
-  flex-direction: column;
-
-  justify-content: space-between;
-}
-
-.info-filler p {
-  display: inline-block;
-}
-
-.fill-input {
-  display: flex;
-}
-
-.fill-input label {
-  padding-right: 16px;
-}
-
-.fill-input span {
-  padding-left: 5px;
-}
 
 /* Кнопка скролла к хедеру */
 
@@ -2111,6 +2040,12 @@ footer {
   opacity: 0;
   right: -100px;
   top: 50%;
+}
+
+@media screen and(max-width: 1500px) {
+  .back-to-top {
+    opacity: 0;
+  }
 }
 
 @keyframes scaling {
