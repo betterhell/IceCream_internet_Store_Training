@@ -2,6 +2,7 @@
 const hamb = document.querySelector(".hamb");
 const burgerPopUp = document.querySelector(".burger-popup");
 const menuBurger = document.querySelector(".top-navig");
+const body = document.querySelector("body");
 
 hamb.addEventListener("click", hambHandler);
 

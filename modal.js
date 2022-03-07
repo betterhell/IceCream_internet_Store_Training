@@ -3,7 +3,6 @@
 const openCallPopUp = document.querySelector(".openCallPopUp");
 const closeCallPopUp = document.querySelector(".closeCallPopUp");
 const callBackPopUp = document.querySelector(".popup-bg");
-const body = document.querySelector("body");
 
 openCallPopUp.addEventListener("click", function (e) {
   e.preventDefault();

@@ -7,6 +7,10 @@ body {
   max-width: 1366px;
 }
 
+body.fixed {
+  overflow: hidden;
+}
+
 header {
   display: flex;
   justify-content: space-evenly;
@@ -78,15 +82,16 @@ header {
     height: 100%;
     background-color: white;
     z-index: 2;
-    transition: 0.3s;
+    transition: all 0.3s;
     /* gap: 30px; */
   }
   .burger-popup.open {
     left: 0px;
     display: block;
-    /* display: flex;
-      justify-content: center;
-      align-items: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
   }
   .hamb.active .bar:nth-child(2) {
     opacity: 0;
@@ -147,7 +152,15 @@ header {
   margin-right: 32px;
 }
 
-.navig li:hover {
+.catalogue-2:hover {
+  background: #fec6d4;
+  border-radius: 26px;
+  background-size: cover;
+  padding: 8px;
+  transition: 0.3s;
+}
+
+.catalogue-3:hover {
   background: #fec6d4;
   border-radius: 26px;
   background-size: cover;
@@ -157,6 +170,16 @@ header {
 
 .catalogue {
   position: relative;
+}
+
+.active-cata {
+  background: #ff4a78;
+  padding: 8px 16px;
+  border-radius: 50px;
+}
+
+.active-cata li {
+  color: white;
 }
 
 .catalogue-popup {
@@ -192,7 +215,6 @@ header {
   width: 106px;
   color: #b9b9b9;
   opacity: 0.5;
-  margin-left: 16px;
 }
 
 .head-catalogue {
@@ -513,6 +535,7 @@ header {
 .cart-popup.active {
   opacity: 1;
   transform: translateY(0%) scale(100%);
+  justify-content: center;
 }
 
 .close-cart-popup {
@@ -530,7 +553,7 @@ header {
 
 .cart-popup-content h3 {
   margin: 0px;
-  padding: 48px 0px 30px 48px;
+  padding: 48px 0px 30px 0px;
 }
 
 .cart a {
@@ -568,6 +591,7 @@ header {
 }
 
 .current-dest {
+  cursor: default;
   text-decoration: none;
 }
 
@@ -585,7 +609,7 @@ header {
   width: 345px;
   height: 46px;
   align-items: center;
-  padding-left: 48px;
+  /* padding-left: 48px; */
   justify-content: space-between;
 }
 
@@ -631,7 +655,7 @@ header {
 .line {
   display: flex;
   justify-content: flex-end;
-  margin: 32px 0px 32px 48px;
+  margin: 32px 0px 32px 0px;
   border: 1px solid #e7e7e7;
 }
 
@@ -717,6 +741,7 @@ header {
     justify-content: center;
   }
   .destin {
+    padding-top: 50px;
     padding-left: 50px;
   }
 }
@@ -793,10 +818,10 @@ header {
   padding-right: 40px;
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
 .price-sort p {
-  padding-left: 15px;
   margin: 0px;
   margin-bottom: 13px;
   font-size: 14px;
@@ -805,40 +830,7 @@ header {
 }
 
 .price-input {
-  display: flex;
-  background-image: url(/images/menuSorting.svg);
-  width: 196px;
-  height: 36px;
-  justify-content: center;
-  align-items: center;
-}
-
-.ranger {
-  -webkit-appearance: none;
-  background-color: #565c66;
-  width: 150px;
-  height: 2px;
-  outline: none;
-  position: absolute;
-}
-
-.ranger::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 16px;
-  height: 16px;
-  background: #2d3440;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.ranger::-moz-range-track {
-  -webkit-appearance: none;
-  width: 16px;
-  height: 16px;
-  background: #2d3440;
-  border-radius: 50%;
-  cursor: pointer;
-  position: relative;
+  background-image: url(/images/Подложка\ fat.svg.svg);
 }
 
 /* Жирность */
@@ -1118,8 +1110,17 @@ header {
 .pagination {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   height: 126px;
+}
+
+@media screen and(max-width: 1400px) {
+  .pagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1000px;
+  }
 }
 
 .btn {
@@ -1135,6 +1136,11 @@ header {
   color: #2d3440;
   font-weight: bold;
   margin-right: 320px;
+}
+
+.first-pag {
+  background: #ffffff 26px;
+  border-radius: 50px;
 }
 
 .btn:hover {
@@ -1194,7 +1200,7 @@ header {
   margin: 0 auto;
   border-top: 1px solid rgba(252, 252, 252, 0.3);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   max-width: 1366px;
   height: 153px;
   justify-content: space-around;

@@ -81,6 +81,7 @@
               alt="Логин"
             />Вход</a
           >
+
           <div id="login-popup" class="login-popup">
             <div class="login-pop-content">
               <a class="close-login-popup" href="#"
@@ -101,7 +102,7 @@
               class="img-cart"
               src="/images/Cart.svg"
               alt="Корзина"
-            />Вход</a
+            />Пусто</a
           >
           <div class="cart-popup">
             <div class="cart-popup-content">
@@ -366,7 +367,11 @@
                 <div class="date-tooltip">
                   <label class="date-label" for="text">Дата</label>
                   <div class="tooltip-1-back">
-                    <button aria-describedby="tooltip-1" class="tooltip-button">
+                    <button
+                      disabled
+                      aria-describedby="tooltip-1"
+                      class="tooltip-button"
+                    >
                       <img
                         class="tooltipImg"
                         src="/images/Info dot.svg"
@@ -403,7 +408,11 @@
               <div class="adress-info">
                 <label class="adress-label" for="adress">Адрес</label>
                 <div class="adress-tooltip">
-                  <button aria-describedby="tooltip-2" class="adress-button">
+                  <button
+                    disabled
+                    aria-describedby="tooltip-2"
+                    class="adress-button"
+                  >
                     <img src="/images/Info dot.svg" alt="" />
                   </button>
                   <span role="tooltip" id="tooltip-2" class="tooltiptext-2"
@@ -456,7 +465,6 @@
                 <textarea
                   name="textarea"
                   maxlength="100"
-                  id=""
                   cols="30"
                   rows="10"
                   placeholder="В свободной форме"
@@ -504,7 +512,7 @@
         ><img class="top-btn-img" src="/images/ice-cream-cone.svg" alt=""
       /></a>
     </div>
-
+    
     <script src="/hamb.js"></script>
     <script src="/modal.js"></script>
     <script src="/slider.js"></script>

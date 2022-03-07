@@ -142,9 +142,17 @@ const initCatalog = () => {
       break;
   }
 
+  const randomId = () => {
+    return (
+      Math.random().toString(36).substring(2, 15) +
+      Math.random().toString(36).substring(2, 15)
+    );
+  };
+
   items.forEach((icecream) => {
     const container = document.createElement("div");
     container.classList.add("art1");
+    container.setAttribute("data-id", randomId());
     const pic = document.createElement("img");
     pic.setAttribute("src", icecream.pic);
     const name = document.createElement("h4");
@@ -160,7 +168,7 @@ const initCatalog = () => {
     price.classList.add("price");
     const link = document.createElement("a");
     link.classList.add("articles-link");
-    link.setAttribute("href", "#");
+    link.setAttribute("href", "##");
     const btnToBuy = document.createElement("img");
     btnToBuy.setAttribute("src", "/images/red cart.svg");
     btnToBuy.classList.add("articles-icon");

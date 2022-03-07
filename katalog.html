@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/images/Favicon/32.svg" tupe="image/x-icon" />
     <link rel="stylesheet" href="/katalog.css" />
+    <link href="nouislider.css" rel="stylesheet">
     <title>GllacyShop - Сливочное мороженое</title>
   </head>
     <body>
@@ -19,7 +20,7 @@
         <div class="navig">
           <nav>
             <ul>
-              <a class="catalogue" href="#"><li>Каталог</li></a>
+              <a class="catalogue active-cata" href="#"><li>Каталог</li></a>
               <div class="catalogue-popup">
                 <a class="close-catalogue-popup" href="#"
                   ><img src="/images/Cross.svg" alt="Закрыть"
@@ -31,6 +32,24 @@
                 <a class="naming" href="#">Фруктовый лед</a>
                 <a class="naming" href="#">Мелорин</a>
               </div>
+              <a class="catalogue-2" href="#"><li>Доставка и оплата</li></a>
+              <a class="catalogue-3" href="#"><li>О компании</li></a>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="hamb">
+          <div class="hamb-field">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+  
+        <div class="burger-popup">
+          <nav class="burger-nav">
+            <ul>
+              <a class="catalogue" href="#"><li>Каталог</li></a>
               <a href="#"><li>Доставка и оплата</li></a>
               <a href="#"><li>О компании</li></a>
             </ul>
@@ -92,8 +111,8 @@
                 /></a>
                 <h3>Корзина</h3>
               
-                <div class="carting-items">
-                  <div class="cart-item">
+                <div class="carting-items"> 
+                  <!-- <div class="cart-item">
                     <img class="img-item" src="/images/mini/miniItemMalina.svg" alt="">
                       <div class="name-weight">
                         <h6 class="name-item">Малинка</h6>
@@ -114,8 +133,8 @@
                       <a class="delete-item" href="#"
                         ><img src="/images/Cross.svg" alt="Закрыть"
                       /></a>
-                    </div>
-                </div>
+                    </div> -->
+                </div> 
               
                   <div class="line"></div>
                     
@@ -123,7 +142,7 @@
                       <div class="order-btn">
                         <a href="#">Оформить заказ</a>
                       </div>
-                      <h6 class="final-price">Итого: 790 ₽</h6>
+                      <h6 class="final-price">Итого: </h6>
                   </div>
                   </div>
                 </div>
@@ -167,10 +186,7 @@
 
             <div class="price-sort">
                <p>Цена: 100 ₽ – 500 ₽</p>
-               <div class="price-input">
-                 <input class="ranger" type="range" name="ranger" min="100" max="500" id="ranger">
-                 <input class="ranger" type="range" name="ranger" min="100" max="500" id="ranger">
-               </div>
+               <div class="price-input"></div>
             </div>
 
             <div class="fat-sort">
@@ -230,7 +246,7 @@
             <div class="pagin">
               <a class="pagi-left" href=""><img src="/images/Arrow-left.svg" alt=""></a>
               <a class="pagi-right" href=""><img src="/images/Arrow-right.svg" alt=""></a>
-              <a class="pag" href="#"><span>1</span></a>
+              <a class="pag first-pag" href="#"><span>1</span></a>
               <a class="pag" href="#"><span>2</span></a>
               <a class="pag" href="#"><span>3</span></a>
               <a class="pag" href="#"><span>4</span></a>
@@ -267,11 +283,11 @@
                 </div>
               </div>
             </footer>    
-
-            
-
-
-    </div>
+      </div>
+      <script src="/cart.js" ></script>
+      <script src="/hamb.js"></script>
+      <script src="/nouislider.js"></script>
+      <script src="/toCart.js" ></script>
       <script src="/ranger.js"></script>
       <script src="/popups.js"></script>
       <script src="/catalog.js"></script>

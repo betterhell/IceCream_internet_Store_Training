@@ -1,19 +1,11 @@
-const sliders = document.querySelectorAll('input[type="range"]');
+const slider = document.querySelector(".price-input");
+noUiSlider.cssClasses.target += " range-slider";
 
-sliders[0].addEventListener("input", (e) => {
-  if (+sliders[0].value > +sliders[1].value) {
-    sliders[1].value = +sliders[0].value;
-  }
-});
-
-sliders[1].addEventListener("input", (e) => {
-  if (+sliders[1].value < +sliders[0].value) {
-    sliders[0].value = +sliders[1].value;
-  }
-});
-
-sliders.forEach((slider) => {
-  slider.addEventListener("change", () => {
-    console.log(`from ${sliders[0].value} to ${sliders[1].value}`);
-  });
+noUiSlider.create(slider, {
+  start: [10, 80],
+  connect: true,
+  range: {
+    min: 0,
+    max: 100,
+  },
 });
