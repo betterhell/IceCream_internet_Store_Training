@@ -16,6 +16,8 @@ const currentSlide = (n) => {
   showSlides((slideIndex = n));
 };
 
+const header = document.querySelector("header");
+
 const showSlides = (n) => {
   let slides = document.getElementsByClassName("main-ice");
   let dots = document.getElementsByClassName("slider-dots_item");
@@ -41,6 +43,7 @@ const showSlides = (n) => {
   text[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].classList.add("active");
   body.style.backgroundColor = colors[slideIndex - 1];
+  header.style.backgroundColor = colors[slideIndex - 1];
 };
 
 // --------------------ЖИЖА

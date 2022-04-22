@@ -10,11 +10,11 @@ openCallPopUp.addEventListener("click", function (e) {
   fixedWindow();
 });
 
-closeCallPopUp.addEventListener("click", function (e) {
-  e.preventDefault();
-  callBackPopUp.classList.remove("active");
-  freeWindows();
-});
+// closeCallPopUp.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   callBackPopUp.classList.remove("active");
+//   freeWindows();
+// });
 
 // Заблокировать окно
 
@@ -27,7 +27,7 @@ const fixedWindow = () => {
 // Разблокировать окно
 
 const freeWindows = () => {
-  if (closeCallPopUp) {
+  if (openCallPopUp) {
     body.classList.remove("fixed");
   }
 };

@@ -28,7 +28,7 @@ function updateCart() {
 }
 
 function renderCartItems() {
-  placeForItem.innerHTML = ""; // удаляет элемен
+  placeForItem.innerHTML = ""; // удаляет элемент
   cartArray.forEach((item) => {
     placeForItem.innerHTML += `
     <div class='cart-item'>
@@ -55,6 +55,8 @@ const cartIcon = document.querySelector(".img-cart");
 const windowCart = document.querySelector(".cart-popup");
 const bottomBtn = document.querySelector(".final-order-things");
 const cartFill = document.querySelector(".cart_fill");
+const cartingItems = document.querySelector(".carting-items");
+const eachItem = document.querySelectorAll(".cart-item");
 
 // Подсчёт общей суммы покупки
 function renderSubtotal() {
@@ -69,8 +71,10 @@ function renderSubtotal() {
   subTotal.innerHTML = `Итого: ${totalPrice} ₽`;
 
   if (totalItems === 1) {
+    const cataloguePopUp = document.querySelector(".cart-popup");
+    cataloguePopUp.classList.add("active");
     windowCart.style.width = "441px";
-    windowCart.style.height = "fit-content";
+    windowCart.style.height = "auto";
     cartFill.innerHTML = "Корзина";
     cartFill.style.textAlign = "start";
     bottomBtn.classList.add("enabled");
@@ -79,15 +83,17 @@ function renderSubtotal() {
   } else if (totalItems === 0) {
     cartFill.style.textAlign = "center";
     windowCart.style.width = "288px";
-    windowCart.style.height = "156px";
     cartFill.innerHTML = "Ваша корзина <br> пока пуста";
     bottomBtn.classList.remove("enabled");
     cartIcon.setAttribute("src", "/images/Cart.svg");
     cartValue.innerHTML = "Пусто";
-  } else if (totalItems <= 4) {
+  } else if (totalItems < 4) {
     cartValue.innerHTML = `${totalItems} товара`;
+    cartingItems.style.overflowY = "hidden";
   } else {
     cartValue.innerHTML = `${totalItems} товаров`;
+    cartingItems.style.maxHeight = "228px";
+    cartingItems.style.overflowY = "scroll";
   }
 }
 

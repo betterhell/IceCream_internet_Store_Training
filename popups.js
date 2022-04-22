@@ -15,31 +15,36 @@ const closeAllPopUp = () => {
 };
 
 // Инициализация попапа
-const popUpInit = (open, close, body) => {
+const popUpInit = (open, body) => {
   const openPopUp = document.querySelector(open);
-  const closePopUp = document.querySelector(close);
+
   const popUp = document.querySelector(body);
 
   openPopUp.addEventListener("click", function (e) {
     e.preventDefault();
     closeAllPopUp();
     popUp.classList.add("active");
+    e.stopPropagation();
   });
 
-  closePopUp.addEventListener("click", function (e) {
-    e.preventDefault();
-    popUp.classList.remove("active");
+  popUp.addEventListener("click", (e) => {
+    e.stopPropagation();
   });
 };
 
+document.body.addEventListener("click", closeAllPopUp);
+
 // Форма поиска
-popUpInit(".open-search-popup", ".close-search-popup", ".search-popup");
+popUpInit(".open-search-popup", ".search-popup");
 
 // Форма логина
-popUpInit(".open-login-popup", ".close-login-popup", ".login-popup");
+popUpInit(".open-login-popup", ".login-popup");
 
 // Попап каталога
-popUpInit(".catalogue", ".close-catalogue-popup", ".catalogue-popup");
+popUpInit(".catalogue", ".catalogue-popup");
 
 // Попап корзины
-popUpInit(".open-cart-popup", ".close-cart-popup", ".cart-popup");
+popUpInit(".open-cart-popup", ".cart-popup");
+
+// Сортировка
+// popUpInit(".visibleSort", ".additionSort");

@@ -15,7 +15,13 @@ header {
   display: flex;
   justify-content: space-evenly;
   padding-top: 42px;
-  padding-bottom: 70px;
+  margin-bottom: 38px;
+  padding-bottom: 42px;
+  position: sticky;
+  top: 0;
+  background-color: #feafc3;
+  z-index: 1000;
+  box-shadow: 0px 6px 2px 0px rgba(0, 0, 0, 0.03);
 }
 
 @media screen and (max-width: 1150px) {
@@ -264,9 +270,13 @@ header {
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
-  color: #2d3440;
 }
 
+
+.phone a {
+  text-decoration: none;
+  color: #2d3440;
+}
 /* Кнопки поиска, логина и карзины */
 .buttons {
   display: flex;
@@ -559,7 +569,7 @@ header {
 
 .cart-popup-content h3 {
   margin: 0px;
-  padding: 48px 0px;
+  margin: 48px 0px;
 }
 
 .cart a {
@@ -603,12 +613,6 @@ header {
 
 /* Товары в корзине */
 
-.carting-items {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .cartItems {
   display: flex;
 }
@@ -621,7 +625,7 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 30px;
+  padding: 15px 0;
   justify-content: space-between;
 }
 
@@ -785,10 +789,47 @@ header {
   justify-content: center;
 }
 
-.select-sort-label {
-  margin-bottom: 13px;
-  padding-left: 18px;
+.sorting-popup,.additionSort {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
 }
+
+.visibleSort {
+  padding: 8px 30px;
+  margin-top: 13px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 26px;
+}
+
+.additionSort {
+  margin-top: 3px;
+  display: none;
+  flex-direction: column;
+  background-color: #fcc5d3;
+  height: 100px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.additionSort > span {
+  padding: 5px;
+}
+
+
+.additionSort.active {
+  display: flex;
+}
+
+.additionSort.active > span {
+  padding: 5px;
+}
+
+.additionSort.active > span:hover {
+  background-color: #e7e7e7;
+  border-radius: 26px;
+}
+
 
 .first-floor-sort {
   display: flex;
@@ -829,21 +870,7 @@ header {
   padding-left: 0px;
 }
 
-#select-sort {
-  width: 196px;
-  border-radius: 25px;
-  height: 36px;
-  text-align: center;
-  background-color: #f8c3cf;
-  border: none;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
-  cursor: pointer;
-}
-#select-sort option {
-  cursor: pointer;
-}
+
 
 /* Сортировка цены */
 
@@ -851,7 +878,6 @@ header {
   padding-right: 40px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
 .price-sort p {
@@ -863,7 +889,109 @@ header {
 }
 
 .price-input {
-  background-image: url(/images/Подложка\ fat.svg.svg);
+  padding: 9px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 146px;
+}
+
+/* Double ranger */
+
+.multi-range-slider {
+  max-width: 164px
+}
+
+#input-left-price,#input-right-price {
+  width: 134px
+}
+
+.middle {
+  position: relative;
+  width: 152px;
+  padding: 6px;
+}
+
+.slider {
+  position: relative;
+  z-index: 1;
+  height: 6px;
+  margin: 0 15px;
+}
+
+.slider > .track {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  height: 1px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 5px;
+  background: #565C66;
+  border: 2px solid #565C66;
+}
+
+.slider > .range {
+  position: absolute;
+  z-index: 2;
+  left: 25%;
+  right: 25%;
+  top: 0;
+  bottom: 0;
+  background: #565C66;
+  opacity: 0.3
+}
+
+.slider > .thumb {
+  position: absolute;
+  z-index: 3;
+  width: 16px;
+  height: 16px;
+  background: #2D3440;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(98, 0, 238, 0.1);
+}
+
+.slider > .thumb.left {
+  left: 25%;
+  transform: translate(-15px, -6px);
+}
+
+.slider > .thumb.right {
+  right: 25%;
+  transform: translate(15px, -6px);
+}
+
+.slider > .thumb.hover {
+  box-shadow: 0 0 0 10px rgba(98, 0, 238, 0.1);
+}
+
+.slider > .thumb.active {
+  box-shadow: 0 0 0 15px rgba(98, 0, 238, 0.2);
+}
+
+input[type="range"] {
+  position: absolute;
+  pointer-events: none;
+  -webkit-appearance: none;
+  z-index: 2;
+  height: 6px;
+  width: 164px;
+  opacity: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 30px;
+  height: 30px;
+  border-radius: 0;
+  border: 0 none;
+  background-color: red;
+  -webkit-appearance: none;
 }
 
 /* Жирность */

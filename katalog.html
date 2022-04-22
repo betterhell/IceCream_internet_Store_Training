@@ -22,9 +22,6 @@
             <ul>
               <a class="catalogue active-cata" href="#"><li>Каталог</li></a>
               <div class="catalogue-popup">
-                <a class="close-catalogue-popup" href="#"
-                  ><img src="/images/Cross.svg" alt="Закрыть"
-                /></a>
                 <a class="head-catalogue" href="#">Новинки</a>
                 <hr />
                 <a class="naming" href="/katalog.html">Сливочное</a>
@@ -57,7 +54,7 @@
         </div>
   
         <div class="phone">
-          <h3>+7 800 555-86-28</h3>
+          <h3><a href="tel:88005558628">+7 800 555-86-28</a></h3>
         </div>
 
         <div class="buttons">
@@ -106,13 +103,9 @@
               /><span class="cartItems">Пусто</span></a>
             <div class="cart-popup">
               <div class="cart-popup-content">
-                <a class="close-cart-popup" href="#"
-                  ><img src="/images/Cross.svg" alt="Закрыть"
-                /></a>
                 <h3 class="cart_fill">Ваша корзина <br> пока пуста</h3>
               
-                <div class="carting-items"> 
-                </div> 
+                <div class="carting-items"></div> 
                   <div class="final-order-things">
                       <div class="order-btn">
                         <a href="#">Оформить заказ</a>
@@ -147,21 +140,59 @@
         <div class="first-floor-sort">
           <div class="relevant-sort">
             <div class="sorting">
-              <label class="select-sort-label" for="select-sort">Сортировка:</label>
+              <!-- <label class="select-sort-label" for="select-sort">Сортировка:</label>
               <select  name="select-sort" id="select-sort">
-                <option value="по популярности">по популярности</option>
-                <option value="новинки">новинки</option>
-                <option value="по минимальной цене">по минимальной цене</option>
-                <option value="по максимальной цене">по максимальной цене</option>
-              </select>
+                <div class="innerOpt">
+                  <option value="по популярности">по популярности</option>
+                  <option value="новинки">новинки</option>
+                  <option value="по минимальной цене">по минимальной цене</option>
+                  <option value="по максимальной цене">по максимальной цене</option>
+                </div>
+              </select> -->
+              <label class="select-sort-label" for="select-sort">Сортировка:</label>
+              <div class="sorting-popup">
+                <div class="visibleSort">
+                  <span id="popularValueSort" class="popularValueSort">по популярности</span>
+                </div>
+                <div class="additionSort">
+                  <span class="newsValueSort">новинки</span>
+                  <span class="minPriceValueSort">по минимальной цене</span>
+                  <span class="maxPriceValueSort">по максимальной цене</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          
 
             <div class="price-sort">
                <p>Цена: 100 ₽ – 500 ₽</p>
-               <div class="price-input"></div>
+               <div class="price-input">
+                <div class="middle">
+                  <div class="multi-range-slider">
+                    <input
+                      type="range"
+                      id="input-left-price"
+                      min="0"
+                      max="100"
+                      value="25"
+                    />
+                    <input
+                      type="range"
+                      id="input-right-price"
+                      min="0"
+                      max="100"
+                      value="75"
+                    />
+  
+                    <div class="slider">
+                      <div class="track"></div>
+                      <div class="range"></div>
+                      <div class="thumb left"></div>
+                      <div class="thumb right"></div>
+                    </div>
+                  </div>
+                </div>
+               </div>
             </div>
 
             <div class="fat-sort">
@@ -191,13 +222,13 @@
                     <input data-fill="шоколад" class="fill-input-1 fill-inputs" id="fill-1" type="checkbox" name="filler" value="">
                     <label data-fill="шоколад" class="fill-label fill-label-1" for="fill-1"><span>школоданые</span></label>
                     <input data-fill="посыпка" class="fill-inputs" id="fill-2" type="checkbox" name="filler" value="">
-                    <label class="fill-label" for="fill-2"><span>сахарные посыпки</span></label>
+                    <label class="fill-label fill-label-2" for="fill-2"><span>сахарные посыпки</span></label>
                     <input data-fill="фрукты" class="fill-inputs" id="fill-3" type="checkbox" name="filler" value="">
-                    <label class="fill-label" for="fill-3"><span>фрукты</span></label>
+                    <label class="fill-label fill-label-3" for="fill-3"><span>фрукты</span></label>
                     <input data-fill="сироп" class="fill-inputs" id="fill-4" type="checkbox" name="filler" value="">
-                    <label class="fill-label" for="fill-4"><span>сиропы</span></label>
+                    <label class="fill-label fill-label-4" for="fill-4"><span>сиропы</span></label>
                     <input data-fill="джем" class="fill-inputs" id="fill-5" type="checkbox" name="filler" value="">
-                    <label class="fill-label" for="fill-5"><span>джемы</span></label>
+                    <label class="fill-label fill-label-5" for="fill-5"><span>джемы</span></label>
                   </div>
               
         
@@ -261,10 +292,11 @@
       </div>
       <script src="/cart.js" ></script>
       <script src="/hamb.js"></script>
-      <script src="/nouislider.js"></script>
       <script src="/toCart.js" ></script>
       <script src="/ranger.js"></script>
       <script src="/popups.js"></script>
       <script src="/catalog.js"></script>
+      <script src="/doubleRanger.js"></script>
+      <script src="/sorting.js"></script>
     </body>
 </html>

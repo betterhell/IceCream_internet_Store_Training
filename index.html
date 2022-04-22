@@ -19,11 +19,8 @@
       <div class="navig">
         <nav id="top-nav">
           <ul>
-            <a class="catalogue" href="#"><li>Каталог</li></a>
+            <a class="catalogue nav-link" href="#"><li>Каталог</li></a>
             <div class="catalogue-popup">
-              <a class="close-catalogue-popup" href="#"
-                ><img src="/images/Cross.svg" alt="Закрыть"
-              /></a>
               <a class="head-catalogue" href="#">Новинки</a>
               <hr />
               <a class="naming" href="/katalog.html">Сливочное</a>
@@ -31,8 +28,8 @@
               <a class="naming" href="#">Фруктовый лед</a>
               <a class="naming" href="#">Мелорин</a>
             </div>
-            <a href="#"><li>Доставка и оплата</li></a>
-            <a href="#"><li>О компании</li></a>
+            <a class="catalogue" href="#"><li>Доставка и оплата</li></a>
+            <a class="catalogue" href="#"><li>О компании</li></a>
           </ul>
         </nav>
       </div>
@@ -56,7 +53,7 @@
       </div>
 
       <div class="phone">
-        <h3>+7 800 555-86-28</h3>
+        <h3><a href="tel:88005558628">+7 800 555-86-28</a></h3>
       </div>
       <div class="buttons">
         <div class="search">
@@ -66,9 +63,6 @@
           <!-- Поисковой попап -->
           <div id="search-popup" class="search-popup">
             <div class="search-pop-content">
-              <a class="close-search-popup" href="#"
-                ><img src="/images/Cross.svg" alt="Закрыть"
-              /></a>
               <input type="search" placeholder="Поиск по сайту" />
             </div>
           </div>
@@ -84,9 +78,6 @@
 
           <div id="login-popup" class="login-popup">
             <div class="login-pop-content">
-              <a class="close-login-popup" href="#"
-                ><img src="/images/Cross.svg" alt="Закрыть"
-              /></a>
               <h3>Личный кабинет</h3>
               <input type="email" placeholder="email@example.com" />
               <input type="password" placeholder="******" />
@@ -106,9 +97,6 @@
           >
           <div class="cart-popup">
             <div class="cart-popup-content">
-              <a class="close-cart-popup" href="#"
-                ><img src="/images/Cross.svg" alt="Закрыть"
-              /></a>
               <h3 class="cart_fill">
                 Ваша корзина <br />
                 пока пуста
@@ -151,6 +139,7 @@
       </div>
 
       <div class="slider">
+        <div class="sliderBackground"></div>
         <div class="snapper">
           <a class="carousel-left"></a>
           <a class="carousel-right"></a>
@@ -450,17 +439,18 @@
           5 лит П, Санкт-Петербург
         </h4>
         <p class="for-delivery">Для заказов по телефону:</p>
-        <h4 class="adress-tel">+7 (812) 812-12-12</h4>
+        <h4 class="adress-tel">
+          <a href="tel:88128121212">+7 (812) 812-12-12 </a>
+        </h4>
         <p class="work-time">(с 10 до 20 ежедневно)</p>
 
-        <a href="#" class="open-popup openCallPopUp">Форма обратной связи</a>
+        <button href="#" class="open-popup openCallPopUp">
+          Форма обратной связи
+        </button>
         <!-- Форма обратной связи -->
         <div id="popup-bg" class="popup-bg">
           <div class="popup-body">
             <div class="popup-content">
-              <a class="close-popup closeCallPopUp" href="#">
-                <img src="/images/Cross.svg" alt="close-popup"
-              /></a>
               <form action="#" method="post">
                 <h3>Мы обязательно ответим вам!</h3>
                 <input type="text" required placeholder="Имя и фамилия" />

@@ -5,7 +5,7 @@ const selectSorts = {
   MAX_PRICE: "по максимальной цене",
 };
 
-const fillers = {
+const FILLERS = {
   CHOKOLATE: "шоколад",
   SUGAR: "сахарные посыпки",
   FRUITS: "фрукты",
@@ -20,8 +20,8 @@ const icecreams = [
     name: "Малинка",
     description: "Сливочное мороженое с малиновым джемом",
     price: 310,
-    fat: 3,
-    fillers: [fillers.JEM, fillers.FRUITS],
+    fat: 0,
+    fillers: [FILLERS.JEM, FILLERS.FRUITS],
     numberOfUnits: 1,
   },
   {
@@ -30,8 +30,8 @@ const icecreams = [
     name: "Фисташка",
     description: "Фисташковый пломбир с кусочками шоколада",
     price: 340,
-    fat: 0,
-    fillers: [fillers.CHOKOLATE],
+    fat: 10,
+    fillers: [FILLERS.CHOKOLATE],
   },
   {
     id: 2,
@@ -39,8 +39,8 @@ const icecreams = [
     name: "Черника",
     description: "Крем-брюле с черничным джемом",
     price: 330,
-    fat: 15,
-    fillers: [fillers.JEM, fillers.FRUITS],
+    fat: 30,
+    fillers: [FILLERS.JEM, FILLERS.FRUITS],
   },
   {
     id: 3,
@@ -48,8 +48,8 @@ const icecreams = [
     name: "Бабл-гам",
     description: "Ванильный пломбир со сладкой посыпкой",
     price: 320,
-    fat: 45,
-    fillers: [fillers.SUGAR],
+    fat: 35,
+    fillers: [FILLERS.SUGAR],
   },
   {
     id: 4,
@@ -57,8 +57,8 @@ const icecreams = [
     name: "Банан",
     description: "Сливочный пломбир с банановым вкусом",
     price: 340,
-    fat: 25,
-    fillers: [fillers.FRUITS],
+    fat: 0,
+    fillers: [FILLERS.FRUITS],
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ const icecreams = [
     description: "Классический шоколадный пломбир",
     price: 270,
     fat: 10,
-    fillers: [fillers.CHOKOLATE],
+    fillers: [FILLERS.CHOKOLATE],
   },
   {
     id: 6,
@@ -75,8 +75,8 @@ const icecreams = [
     name: "Клубничка",
     description: "Сливочный пломбир с клубничным вкусом",
     price: 300,
-    fat: 20,
-    fillers: [fillers.FRUITS],
+    fat: 30,
+    fillers: [FILLERS.FRUITS],
   },
   {
     id: 7,
@@ -84,8 +84,8 @@ const icecreams = [
     name: "Лимон",
     description: "Освежающий лимонный сорбет",
     price: 310,
-    fat: 56,
-    fillers: [fillers.FRUITS],
+    fat: 35,
+    fillers: [FILLERS.FRUITS],
   },
   {
     id: 8,
@@ -93,8 +93,8 @@ const icecreams = [
     name: "Ментол",
     description: "Сливочный пломбир с ментоловым сиропом",
     price: 320,
-    fat: 15,
-    fillers: [fillers.SYRUPS],
+    fat: 0,
+    fillers: [FILLERS.SYRUPS],
   },
   {
     id: 9,
@@ -103,7 +103,7 @@ const icecreams = [
     description: "Фисташковый пломбир с шоколадным сиропом",
     price: 360,
     fat: 10,
-    fillers: [fillers.CHOKOLATE, fillers.SYRUPS],
+    fillers: [FILLERS.CHOKOLATE, FILLERS.SYRUPS],
   },
   {
     id: 10,
@@ -111,8 +111,8 @@ const icecreams = [
     name: "Крем-брюле",
     description: "Классическое крем-брюле",
     price: 280,
-    fat: 2,
-    fillers: [fillers.SUGAR],
+    fat: 30,
+    fillers: [FILLERS.SUGAR],
   },
   {
     id: 11,
@@ -120,19 +120,19 @@ const icecreams = [
     name: "Ежевика",
     description: "Сливочное мороженое с ежевичным джемом",
     price: 330,
-    fat: 10,
-    filler: [fillers.FRUITS, fillers.JEM],
+    fat: 35,
+    filler: [FILLERS.FRUITS, FILLERS.JEM],
   },
 ];
 
-const initCatalog = () => {
+const initCatalog = (arrayOfItems) => {
   const catalog = document.getElementById("catalog");
 
   const fatInputs = document.querySelectorAll(".fat-input");
   const fillInputs = document.querySelectorAll(".fill-inputs");
-  const selectSort = document.getElementById("select-sort");
+  const selectSort = document.getElementById("popularValueSort");
 
-  let items = [...icecreams];
+  let items = [...arrayOfItems];
   switch (selectSort.value) {
     case selectSorts.MIN_PRICE:
       items = items.sort((item1, item2) => {
@@ -179,6 +179,9 @@ const initCatalog = () => {
     btnToBuy.setAttribute("src", "/images/red cart.svg");
     btnToBuy.classList.add("articles-icon");
     btnToBuy.setAttribute("onclick", `addInCart(${icecream.id})`);
+    btnToBuy.addEventListener("click", (event) => {
+      event.stopPropagation();
+    });
 
     control.appendChild(price);
     control.appendChild(link);
@@ -202,13 +205,6 @@ const clearCatalog = () => {
   }
 };
 
-initCatalog();
-
-const sumbitSort = document.getElementById("submit-sort");
-
-sumbitSort.addEventListener("click", () => {
-  clearCatalog();
-  initCatalog();
-});
+initCatalog(icecreams);
 
 // ====================================
