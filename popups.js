@@ -45,6 +45,3 @@ popUpInit(".catalogue", ".catalogue-popup");
 
 // Попап корзины
 popUpInit(".open-cart-popup", ".cart-popup");
-
-// Сортировка
-// popUpInit(".visibleSort", ".additionSort");

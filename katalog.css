@@ -789,47 +789,74 @@ header {
   justify-content: center;
 }
 
-.sorting-popup,.additionSort {
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
+.select-sort-label {
+  margin-bottom: 13px;
 }
 
-.visibleSort {
-  padding: 8px 30px;
-  margin-top: 13px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 26px;
+/* ======================= */
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+  width: 196px;
 }
 
-.additionSort {
-  margin-top: 3px;
+.custom-select select {
   display: none;
-  flex-direction: column;
-  background-color: #fcc5d3;
-  height: 100px;
-  border-radius: 10px;
-  align-items: center;
 }
 
-.additionSort > span {
-  padding: 5px;
-}
-
-
-.additionSort.active {
-  display: flex;
-}
-
-.additionSort.active > span {
-  padding: 5px;
-}
-
-.additionSort.active > span:hover {
-  background-color: #e7e7e7;
+.select-selected {
+  background-color:#feafc3;
   border-radius: 26px;
 }
 
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 16px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: rgb(0, 0, 0) transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent rgb(0, 0, 0) transparent;
+  top: 7px;
+}
+
+.select-items div,.select-selected {
+  color: #2D3440;
+  padding: 8px 16px 6px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.3)
+}
+
+.select-items div {
+  background-color: transparent
+}
+
+.select-items {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  top: 40px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.3);
+
+}
 
 .first-floor-sort {
   display: flex;

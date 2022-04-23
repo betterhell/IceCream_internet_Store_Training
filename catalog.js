@@ -130,7 +130,7 @@ const initCatalog = (arrayOfItems) => {
 
   const fatInputs = document.querySelectorAll(".fat-input");
   const fillInputs = document.querySelectorAll(".fill-inputs");
-  const selectSort = document.getElementById("popularValueSort");
+  const selectSort = document.getElementById("select-sort");
 
   let items = [...arrayOfItems];
   switch (selectSort.value) {

@@ -65,9 +65,6 @@
             <!-- Поисковой попап -->
             <div id="search-popup" class="search-popup">
               <div class="search-pop-content">
-                <a class="close-search-popup" href="#"
-                  ><img src="/images/Cross.svg" alt="Закрыть"
-                /></a>
                 <input type="search" placeholder="Поиск по сайту" />
               </div>
             </div>
@@ -82,9 +79,6 @@
 
             <div id="login-popup" class="login-popup">
               <div class="login-pop-content">
-                <a class="close-login-popup" href="#"
-                  ><img src="/images/Cross.svg" alt="Закрыть"
-                /></a>
                 <h3>Личный кабинет</h3>
                 <input type="email" placeholder="email@example.com" />
                 <input type="password" placeholder="******" />
@@ -140,16 +134,16 @@
         <div class="first-floor-sort">
           <div class="relevant-sort">
             <div class="sorting">
-              <!-- <label class="select-sort-label" for="select-sort">Сортировка:</label>
-              <select  name="select-sort" id="select-sort">
-                <div class="innerOpt">
-                  <option value="по популярности">по популярности</option>
-                  <option value="новинки">новинки</option>
-                  <option value="по минимальной цене">по минимальной цене</option>
-                  <option value="по максимальной цене">по максимальной цене</option>
-                </div>
-              </select> -->
               <label class="select-sort-label" for="select-sort">Сортировка:</label>
+              <div class="innerOpt custom-select">
+                <select  name="select-sort" id="select-sort">
+                    <option value="по популярности">по популярности</option>
+                    <option value="новинки">новинки</option>
+                    <option value="по минимальной цене">по минимальной цене</option>
+                    <option value="по максимальной цене">по максимальной цене</option>
+                </select>
+              </div>
+              <!-- <label class="select-sort-label" for="select-sort">Сортировка:</label>
               <div class="sorting-popup">
                 <div class="visibleSort">
                   <span id="popularValueSort" class="popularValueSort">по популярности</span>
@@ -159,7 +153,7 @@
                   <span class="minPriceValueSort">по минимальной цене</span>
                   <span class="maxPriceValueSort">по максимальной цене</span>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -297,6 +291,7 @@
       <script src="/popups.js"></script>
       <script src="/catalog.js"></script>
       <script src="/doubleRanger.js"></script>
+      <script src="/sortPopUp.js"></script>
       <script src="/sorting.js"></script>
     </body>
 </html>

@@ -4,25 +4,17 @@ const openCallPopUp = document.querySelector(".openCallPopUp");
 const closeCallPopUp = document.querySelector(".closeCallPopUp");
 const callBackPopUp = document.querySelector(".popup-bg");
 
-openCallPopUp.addEventListener("click", function (e) {
-  e.preventDefault();
-  callBackPopUp.classList.add("active");
-  fixedWindow();
-});
-
-// closeCallPopUp.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   callBackPopUp.classList.remove("active");
-//   freeWindows();
-// });
-
-// Заблокировать окно
-
 const fixedWindow = () => {
   if (openCallPopUp) {
     body.classList.add("fixed");
   }
 };
+
+openCallPopUp.addEventListener("click", function (e) {
+  e.preventDefault();
+  callBackPopUp.classList.add("active");
+  fixedWindow();
+});
 
 // Разблокировать окно
 
