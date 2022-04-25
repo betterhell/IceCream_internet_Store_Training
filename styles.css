@@ -76,8 +76,6 @@ header {
 
 @media screen and (max-width: 1150px) {
   .hamb {
-    display: flex;
-    align-items: center;
   }
   .bar {
     display: block;
@@ -92,10 +90,7 @@ header {
     cursor: pointer;
   }
   .burger-popup {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 110px;
+    top: 105px;
     left: -100%;
     width: 100%;
     height: 100%;
@@ -108,7 +103,17 @@ header {
     left: 0%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .burger-popup.open ul {
+    padding: 0px;
+    margin: 0px;
+  }
+  .burger-popup.open li {
+    padding: 40px 100px;
+    border-bottom: 1px solid gray;
+
   }
   .hamb.active .bar:nth-child(2) {
     opacity: 0;
@@ -138,7 +143,6 @@ header {
 }
 
 .burger-nav ul {
-  padding: 0px;
   list-style-type: none;
 }
 
@@ -1240,6 +1244,21 @@ main {
   }
 }
 
+@media screen and (max-width: 550px) {
+  .off1 {
+    padding-bottom: 30px;
+  }
+  .off2 {
+    /* padding-bottom: 30px; */
+  }
+
+  .off-block-1 {
+    display: block;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+}
+
 .off-block-2 {
   display: flex;
   justify-content: space-evenly;
@@ -1259,6 +1278,20 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 30px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+.off-block-2 {
+  display: block;
+  padding-left: 10px;
+  padding-right: 10px;
+  }
+  .off3 {
+    padding-bottom: 30px;
+  }
+  .off4 {
+    padding-bottom: 30px;
   }
 }
 
@@ -1297,6 +1330,12 @@ main {
   position: relative;
   max-width: 442px;
   max-height: 66px;
+}
+
+@media screen and (max-width: 600px) {
+  .off1::before, .off2::before,.off3::before, .off4::before {
+    content: "";
+  }
 }
 
 /* Subscribe block */
@@ -1344,13 +1383,30 @@ main {
   background-image: url(/images/Почтовый\ фон.svg);
 }
 
+@media screen and (max-width: 550px) {
+  .subs-block form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .subs-block form input {
+    margin-bottom: 10px;
+  }
+
+  .subs-block p {
+    padding: 0px;
+    text-align: center;
+  }
+}
+
 .subs-block {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 16px;
-  width: 558px;
+  max-width: 558px;
   height: 208px;
   background-color: #fcfcfc;
   border-radius: 16px;
