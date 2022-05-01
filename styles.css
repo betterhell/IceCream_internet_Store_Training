@@ -302,7 +302,7 @@ header {
   justify-content: center;
   margin-right: 16px;
   max-height: 30px;
-  background-image: url(/images/layers/Подложка\ search.svg);
+  background-image: url(images/layers/Подложка\ search.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -379,7 +379,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(/images/layers/Подложка\ login.svg);
+  background-image: url(images/layers/Подложка\ login.svg);
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 16px;
@@ -528,7 +528,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(/images/layers/Подложка\ login.svg);
+  background-image: url(images/layers/Подложка\ login.svg);
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 16px;
@@ -757,7 +757,7 @@ main {
 /* Кнопки слайдера */
 
 .carousel-left::before {
-  content: url(/images/left.png);
+  content: url(images/left.png);
   z-index: 1;
   align-self: center;
   right: 32px;
@@ -765,7 +765,7 @@ main {
 }
 
 .carousel-right:after {
-  content: url(/images/right.png);
+  content: url(images/right.png);
   z-index: 1;
   align-self: center;
   right: -268px;
@@ -903,7 +903,7 @@ main {
   width: 570px;
   height: 268px;
   background: #ff7799;
-  background-image: url(/images/back-layer/back-layer1.svg);
+  background-image: url(images/back-layer/back-layer1.svg);
   border-radius: 16px;
 }
 
@@ -970,7 +970,7 @@ main {
   width: 570px;
   height: 268px;
   background: #ff7799;
-  background-image: url(/images/back-layer/зефирки\ фото.svg);
+  background-image: url(images/back-layer/зефирки\ фото.svg);
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: bottom;
@@ -1163,7 +1163,7 @@ main {
 /* About blocks */
 
 .waffle {
-  background-image: url(/images/layers/Вафля\ фон.svg);
+  background-image: url(images/layers/Вафля\ фон.svg);
   background-repeat: no-repeat;
   border-radius: 16px;
   max-width: 1170px;
@@ -1296,27 +1296,27 @@ main {
 }
 
 .off1::before {
-  content: url(/images/Мороженое\ before.svg);
+  content: url(images/Мороженое\ before.svg);
   left: -60px;
   top: -5px;
   position: absolute;
 }
 .off2::before {
-  content: url(/images/Корова\ before.svg);
+  content: url(images/Корова\ before.svg);
   margin-right: 0.5em;
   left: -60px;
   top: -5px;
   position: absolute;
 }
 .off3::before {
-  content: url(/images/Листик\ before.svg);
+  content: url(images/Листик\ before.svg);
   margin-right: 0.5em;
   left: -60px;
   top: -5px;
   position: absolute;
 }
 .off4::before {
-  content: url(/images/Градусник\ before.svg);
+  content: url(images/Градусник\ before.svg);
   margin-right: 0.5em;
   left: -60px;
   top: -5px;
@@ -1352,7 +1352,7 @@ main {
   align-content: center;
   flex-direction: column;
   border-radius: 16px;
-  background-image: url(/images/newsWall.svg);
+  background-image: url(images/newsWall.svg);
   background-repeat: no-repeat;
   width: 570px;
   height: 220px;
@@ -1380,7 +1380,7 @@ main {
   width: 570px;
   height: 220px;
   border-radius: 16px;
-  background-image: url(/images/Почтовый\ фон.svg);
+  background-image: url(images/Почтовый\ фон.svg);
 }
 
 @media screen and (max-width: 550px) {
@@ -1479,7 +1479,7 @@ main {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-image: url(/images/delivery\ фон.svg);
+  background-image: url(images/delivery\ фон.svg);
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 auto;
@@ -1797,7 +1797,7 @@ main {
 .adress-block {
   display: flex;
   align-items: center;
-  background-image: url(/images/icecreamwall.svg);
+  background-image: url(images/icecreamwall.svg);
   background-repeat: no-repeat;
   max-width: 1170px;
   height: 492px;
@@ -2112,13 +2112,13 @@ footer {
   line-height: 20px;
 }
 .for-provider li::before {
-  content: url(/images/Heart-fill.svg);
+  content: url(images/Heart-fill.svg);
   padding-bottom: 30px;
   align-self: center;
 }
 
 .for-provider li:hover::before {
-  content: url(/images/icons/heart.png);
+  content: url(images/icons/heart.png);
 }
 
 .footer-section-3 {

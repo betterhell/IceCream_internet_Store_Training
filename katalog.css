@@ -294,7 +294,7 @@ header {
   justify-content: center;
   margin-right: 16px;
   max-height: 30px;
-  background-image: url(/images/layers/Подложка\ search.svg);
+  background-image: url(images/layers/Подложка\ search.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -371,7 +371,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(/images/layers/Подложка\ login.svg);
+  background-image: url(images/layers/Подложка\ login.svg);
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 16px;
@@ -813,7 +813,7 @@ header {
 
 .select-selected:after {
   position: absolute;
-  content: url(/images/Arrow-down.svg);
+  content: url(images/Arrow-down.svg);
   top: 10px;
   right: 25px;
   width: 0;
@@ -821,7 +821,7 @@ header {
 }
 
 .select-selected.select-arrow-active:after {
-  content: url(/images/Arrow-left.svg);
+  content: url(images/Arrow-left.svg);
   transform: rotate(90deg);
   right: 10px;
 }
@@ -1042,7 +1042,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .fat-content {
   display: flex;
-  background-image: url(/images/Подложка\ fat.svg);
+  background-image: url(images/Подложка\ fat.svg);
   width: 367px;
   height: 36px;
   align-items: center;
@@ -1058,11 +1058,11 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .fat-input[type="radio"] + .fat-label:before {
-  content: url(/images/Radio-off.svg);
+  content: url(images/Radio-off.svg);
 }
 
 .fat-input[type="radio"]:checked + .fat-label:before {
-  content: url(/images/Radio-on.svg);
+  content: url(images/Radio-on.svg);
 }
 
 .fat-label:before {
@@ -1097,7 +1097,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .fill-input {
   display: flex;
-  background-image: url(/images/Подложка\ fill.svg);
+  background-image: url(images/Подложка\ fill.svg);
   background-repeat: no-repeat;
   max-width: 596px;
   height: 36px;
@@ -1125,12 +1125,12 @@ input[type="range"]::-webkit-slider-thumb {
 
 /* Новые чекбоксы */
 .fill-inputs[type="checkbox"] + .fill-label::before {
-  content: url(/images/checkboxOff.svg);
+  content: url(images/checkboxOff.svg);
   margin-top: 2px;
 }
 
 .fill-inputs[type="checkbox"]:checked + .fill-label::before {
-  content: url(/images/checkboxOn.svg);
+  content: url(images/checkboxOn.svg);
   margin-top: 2px;
 }
 
@@ -1444,12 +1444,12 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .for-provider li::before {
-  content: url(/images/Heart-fill.svg);
+  content: url(images/Heart-fill.svg);
   margin-right: 9px;
 }
 
 .for-provider li:hover::before {
-  content: url(/images/icons/heart.png);
+  content: url(images/icons/heart.png);
 }
 
 .footer-section-3 {
