@@ -42,7 +42,7 @@ function renderCartItems() {
       <div class='price_delete_block'>
         <h6 class='price-item'>${item.price} ₽ </h6>
         <a class='delete-item' onclick="removeItemFromCart(${item.id})" href='##'>
-        <img src='/images/Cross.svg' alt='Закрыть' />
+        <img src='images/Cross.svg' alt='Закрыть' />
       </a>
       </div>
     </div>`;
@@ -78,14 +78,14 @@ function renderSubtotal() {
     cartFill.innerHTML = "Корзина";
     cartFill.style.textAlign = "start";
     bottomBtn.classList.add("enabled");
-    cartIcon.setAttribute("src", "/images/cartFull.svg");
+    cartIcon.setAttribute("src", "images/cartFull.svg");
     cartValue.innerHTML = `${totalItems} товар`;
   } else if (totalItems === 0) {
     cartFill.style.textAlign = "center";
     windowCart.style.width = "288px";
     cartFill.innerHTML = "Ваша корзина <br> пока пуста";
     bottomBtn.classList.remove("enabled");
-    cartIcon.setAttribute("src", "/images/Cart.svg");
+    cartIcon.setAttribute("src", "images/Cart.svg");
     cartValue.innerHTML = "Пусто";
   } else if (totalItems < 4) {
     cartValue.innerHTML = `${totalItems} товара`;
