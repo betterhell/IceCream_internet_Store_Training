@@ -53,7 +53,7 @@ const icecreams = [
   },
   {
     id: 4,
-    pic: "images//banan.svg",
+    pic: "images/banan.svg",
     name: "Банан",
     description: "Сливочный пломбир с банановым вкусом",
     price: 340,
