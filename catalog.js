@@ -16,7 +16,7 @@ const FILLERS = {
 const icecreams = [
   {
     id: 0,
-    pic: "/images/mini/Photo.svg",
+    pic: "images/mini/Photo.svg",
     name: "Малинка",
     description: "Сливочное мороженое с малиновым джемом",
     price: 310,
@@ -26,7 +26,7 @@ const icecreams = [
   },
   {
     id: 1,
-    pic: "/images/mini/Photo1.svg",
+    pic: "images/mini/Photo1.svg",
     name: "Фисташка",
     description: "Фисташковый пломбир с кусочками шоколада",
     price: 340,
@@ -35,7 +35,7 @@ const icecreams = [
   },
   {
     id: 2,
-    pic: "/images/mini/Photo2.svg",
+    pic: "images/mini/Photo2.svg",
     name: "Черника",
     description: "Крем-брюле с черничным джемом",
     price: 330,
@@ -44,7 +44,7 @@ const icecreams = [
   },
   {
     id: 3,
-    pic: "/images/mini/Photo3.svg",
+    pic: "images/mini/Photo3.svg",
     name: "Бабл-гам",
     description: "Ванильный пломбир со сладкой посыпкой",
     price: 320,
@@ -53,7 +53,7 @@ const icecreams = [
   },
   {
     id: 4,
-    pic: "/images//banan.svg",
+    pic: "images//banan.svg",
     name: "Банан",
     description: "Сливочный пломбир с банановым вкусом",
     price: 340,
@@ -62,7 +62,7 @@ const icecreams = [
   },
   {
     id: 5,
-    pic: "/images/shokoladka.svg",
+    pic: "images/shokoladka.svg",
     name: "Шоколадка",
     description: "Классический шоколадный пломбир",
     price: 270,
@@ -71,7 +71,7 @@ const icecreams = [
   },
   {
     id: 6,
-    pic: "/images/klubnika.svg",
+    pic: "images/klubnika.svg",
     name: "Клубничка",
     description: "Сливочный пломбир с клубничным вкусом",
     price: 300,
@@ -80,7 +80,7 @@ const icecreams = [
   },
   {
     id: 7,
-    pic: "/images/limon.svg",
+    pic: "images/limon.svg",
     name: "Лимон",
     description: "Освежающий лимонный сорбет",
     price: 310,
@@ -89,7 +89,7 @@ const icecreams = [
   },
   {
     id: 8,
-    pic: "/images/mentol.svg",
+    pic: "images/mentol.svg",
     name: "Ментол",
     description: "Сливочный пломбир с ментоловым сиропом",
     price: 320,
@@ -98,7 +98,7 @@ const icecreams = [
   },
   {
     id: 9,
-    pic: "/images/oreh.svg",
+    pic: "images/oreh.svg",
     name: "Орешек",
     description: "Фисташковый пломбир с шоколадным сиропом",
     price: 360,
@@ -107,7 +107,7 @@ const icecreams = [
   },
   {
     id: 10,
-    pic: "/images/krem-brule.svg",
+    pic: "images/krem-brule.svg",
     name: "Крем-брюле",
     description: "Классическое крем-брюле",
     price: 280,
@@ -116,7 +116,7 @@ const icecreams = [
   },
   {
     id: 11,
-    pic: "/images/ejevika.svg",
+    pic: "images/ejevika.svg",
     name: "Ежевика",
     description: "Сливочное мороженое с ежевичным джемом",
     price: 330,
@@ -176,7 +176,7 @@ const initCatalog = (arrayOfItems) => {
     link.classList.add("articles-link");
     link.setAttribute("href", "##");
     const btnToBuy = document.createElement("img");
-    btnToBuy.setAttribute("src", "/images/red cart.svg");
+    btnToBuy.setAttribute("src", "images/red cart.svg");
     btnToBuy.classList.add("articles-icon");
     btnToBuy.setAttribute("onclick", `addInCart(${icecream.id})`);
     btnToBuy.addEventListener("click", (event) => {
